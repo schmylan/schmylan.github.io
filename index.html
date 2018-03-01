@@ -2,12 +2,962 @@
 <html>
 
 <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-114745058-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-114745058-1');
+    </script>
+
     <title>About Rylan Barnes</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="apple-mobile-web-app-title" content="rylan.io">
+    <meta name="application-name" content="rylan.io">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    
+    <link rel="stylesheet" href="photoswipe/photoswipe.css">
+    <link rel="stylesheet" href="photoswipe/default-skin/default-skin.css">
+    <script src="photoswipe/photoswipe.min.js"></script>
+    <script src="photoswipe/photoswipe-ui-default.min.js"></script>
+
+    <style>
+        /* @import url('https://fonts.googleapis.com/css?family=Open+Sans'); */
+
+        * { 
+            /* background-color: #ff000010;  */
+            /* border: #0000ff10 solid 1px;  */
+        }
+
+        * {
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            font-family: 'Open Sans', sans-serif;
+            margin: 0px;
+            padding: 0px;
+        }
+        body {
+            margin: 0px;
+            line-height: 32px;
+            background-color: #eee;
+            margin: auto;
+        }
+        p {
+            color: #333;
+            font-size: 18px;
+            font-weight: lighter;
+            letter-spacing: 2px;
+        }
+        header {
+            max-width: 600px;
+            margin: auto;
+            padding: 48px;
+        }
+        header div {
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-between;
+            align-items: center;
+        }
+        header div>img {
+            border-radius: 50%;
+            border: 3px solid white;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.08), 0 3px 6px rgba(0, 0, 0, 0.23);
+        }
+        header h1 {
+            margin: 48px 0px;
+        }
+        footer {
+            margin: 128px 0px;
+            text-align: center;
+        }
+        
+        
+        section h1 {
+            margin: 48px 0px;
+            display: flex;
+            flex-basis: 100%;
+            align-items: center;
+            color: #888;
+            font-size: 22px;
+            height: 64px;
+
+            /* position: sticky; */
+            position: -webkit-sticky;
+            top: 0px;
+            z-index: 99;
+
+            /* for mobile safari*/
+            background-color: #eeeeeebb;
+            -webkit-backdrop-filter: blur(32px);
+        }
+        section h1::after, section h1::before {
+            content: "";
+            flex-grow: 1;
+            background: #ddd;
+            height: 1px;
+            font-size: 0px;
+            line-height: 0px;
+            margin: 0px 24px;
+        }
+
+
+        #startups ul {
+            column-width: 352px; /* 352+16+16=768/2 breakpoint for iPad Air */
+            column-gap: 32px;
+            column-count: 2;
+            column-rule: 1px dotted #ddd;
+            max-width: 1280px;
+            padding: 16px;
+            margin: auto;
+        }
+        #startups li {
+            list-style: none;
+            display: inline-block;
+            background-repeat: no-repeat;
+            width: 100%;
+            margin-top: 32px;
+        }
+        #startups h2 {
+            text-indent: 100%;
+            white-space: nowrap;
+            overflow: hidden;
+            margin-bottom: 32px;
+            background-repeat: no-repeat;
+            background-position: center;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.08), 0 3px 6px rgba(0, 0, 0, 0.23);
+            transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+            border-radius: 8px;
+        }
+        #startups h2:hover {
+            box-shadow: 0 14px 28px rgba(0, 0, 0, 0.16), 0 10px 10px rgba(0, 0, 0, 0.22);
+            position: relative;
+            top: -2px;
+        }
+        #startups p {
+            margin: 0px 32px 32px 32px;
+        }
+        #startups h3 {
+            font-size: 16px;
+            /* font-weight: bold; */
+            text-transform: uppercase;
+            margin: 0px 32px;
+        }
+        #startups div {
+            margin: 0px 32px 16px 32px;
+            float: right;
+            clear: right;
+        }
+        #startups i {
+            display: block;
+            text-align: right;
+            white-space: nowrap;
+            color: #888;
+            font-size: 16px;
+        }
+
+        #shopsavvy h2 {
+            background: no-repeat center/66% url(startups/shopsavvy.svg), no-repeat center/cover url('startups/shopsavvybg.jpg');
+            /* background-image: url(startups/shopsavvy.svg), url('startups/shopsavvybg.jpg'); */
+            /* background-image: url(startups/shopsavvy.svg), -webkit-image-set( url(startups/shopsavvybg.jpg) 1x, url(startups/shopsavvybg@2x.jpg) 2x); */
+            height: 384px;
+        }
+        #shopsavvy h3 {
+            color: #44C200;
+        }
+        #shopsavvy div a {
+            background: url('startups/purch.svg') no-repeat center;
+            background-size: 100%;
+            color: #00000000;
+        }
+        #shopsavvy div a:hover {
+            border-bottom: #EB3F2E 1px solid;
+        }
+        
+
+        #branch9 h2 {
+            background: no-repeat left top/cover url('startups/branch9.png');
+            /* background-image: url('startups/branch9.png');
+            background-image: -webkit-image-set( url(startups/branch9.png) 1x, url(startups/branch9@2x.png) 2x); */
+            height: 256px;
+        }
+        #branch9 h3 {
+            color: #1E1E1E;
+        }
+
+
+        #villagetable h2 {
+            background: no-repeat center/60% url(startups/villagetable.svg), no-repeat center/cover url('startups/villagetablebg.jpg');
+            /* background-image: url(startups/villagetable.svg), url('startups/villagetablebg.jpg');
+            background-image: url(startups/villagetable.svg), -webkit-image-set( url(startups/villagetablebg.jpg) 1x, url(startups/villagetablebg@2x.jpg) 2x); */
+            height: 320px;
+        }
+        #villagetable h3 {
+            color: #F67D15;
+        }
+
+
+        #xui h2 {
+            background: no-repeat center/33% url(startups/xui.svg), no-repeat center/cover url('startups/xuibg.jpg');
+            /* background-image: url(startups/xui.svg), url('startups/xuibg.jpg');
+            background-image: url(startups/xui.svg), -webkit-image-set( url(startups/xuibg.jpg) 1x, url(startups/xuibg@2x.jpg) 2x); */
+            height: 320px;
+        }
+        #xui h3 {
+            color: #3868EC;
+        }
+
+
+        #veryable h2 {
+            background: no-repeat center/50% url(startups/veryable.svg), no-repeat center/cover url('startups/veryablebg.jpg');
+            /* background-image: url(startups/veryable.svg), url('startups/veryablebg.jpg');
+            background-image: url(startups/veryable.svg), -webkit-image-set( url(startups/veryablebg.jpg) 1x, url(startups/veryablebg@2x.jpg) 2x); */
+            height: 256px;
+        }
+        #veryable h3 {
+            color: #93817E;
+        }
+
+
+        #openimage h2 {
+            background: #EC3852 url('startups/openimage.svg') no-repeat 75% 75%;
+            height: 320px;
+        }
+        #openimage h3 {
+            color: #EC3852;
+        }
+
+
+        #spectrum h2 {
+            height: 256px;
+            background-image: url(startups/spectrum.svg), radial-gradient(farthest-corner at 50% 100%, rgba(123, 22, 255, 0.75), #0F015E), linear-gradient(#0F015E, #0F015E);
+        }
+        #spectrum h3 {
+            color: #3C0AA1;
+        }
+
+        @media (max-width: 512px) {
+            #startups div {
+                float: none;
+                clear: none;
+            }
+            #startups i {
+                display: inline;
+                margin-right: 8px;
+                text-align: left;
+            }
+            #startups h2 {
+                height: 256px;
+            }
+        }
+
+
+        #interests li {
+            list-style: none;
+            text-align: right;
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: center;
+            align-items: flex-start;
+        }
+        #interests h2 {
+            color: #666;
+            margin: 64px 32px;
+            text-align: left;
+            display: inline-block;
+            min-width: 176px;
+        }
+        #interests li > div {
+            width: 768px;
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: flex-end;
+            margin-bottom: 48px;
+        }
+        #interests figure {
+            display: inline-block;
+            width: 187px;
+            height: 256px;
+            text-align: center;
+        }
+        #interests img {
+            width: 128px;
+            height: 128px;
+            transform: rotate(12deg) perspective(0px); /* need perspective to fix the weird gap between the img and border */
+            border: white 8px solid;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.08), 0 3px 6px rgba(0, 0, 0, 0.23);
+            position: relative;
+            top: -8px;
+            left: -8px;
+            transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+        }
+        #interests img:hover {
+            transform: rotate(8deg);
+        }
+        #interests a {
+            width: 128px;
+            height: 128px;
+            display: inline-block;
+            transform: rotate(-6deg);
+            border: white 8px solid;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.08), 0 3px 6px rgba(0, 0, 0, 0.23);
+            background-color: #ccc;
+            transition: all 0.3s cubic-bezier(.25, .8, .25, 1);            
+        }
+        #interests a:hover {
+            transform: rotate(-4deg);
+        }
+        #interests figcaption {
+            text-align: center;
+            font-size: 24px;
+            padding: 16px;
+        }
+        @media (max-width: 1024px) {
+            #interests li {
+                justify-content: flex-start;
+            }
+            #interests li > div {
+                width: 100%;
+                justify-content: flex-start;
+                margin-bottom: 0px;
+            }
+        }
+        @media (max-width: 374px) {
+            #interests figure {
+                width: 158px;
+                height: 224px;
+            }
+        }
+
+
+        #mentions ul {
+            margin-bottom: 64px;
+        }
+        #mentions li {
+            list-style: none;
+        }
+        #mentions blockquote {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: center;
+        }
+        #mentions p {
+            order: 1;
+            padding: 48px;
+            max-width: 512px;
+        }
+        #mentions cite {
+            text-indent: 100%;
+            white-space: nowrap;
+            overflow: hidden;
+            width: 128px;
+            height: 128px;
+            background-position: center right;
+            background-repeat: no-repeat;
+            background-size: 128px;
+            opacity: .75;
+        }
+        #nytimes cite           { background-image: url('mentions/nytimes.svg'); }
+        #washingtonpost cite    { background-image: url('mentions/washingtonpost.svg'); }
+        #time cite              { background-image: url('mentions/time.svg'); }
+        #wsj cite               { background-image: url('mentions/wsj.svg'); }
+        #techcrunch cite        { background-image: url('mentions/techcrunch.svg'); }
+
+        #mentions div {
+            max-width: 1280px;
+            margin: auto;
+            padding: 16px;
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: center;
+        }
+        #mentions video {
+            height: 200px;
+            margin: 16px;
+            border-radius: 8px;
+            box-shadow: 0 16px 32px #00000060;
+        }
+        #mentions a {
+            display: block;
+            text-align: center;
+            color: #333333;
+            padding: 32px;
+            margin: 16px auto;
+            max-width: 1048px;
+            width: 90%;
+        }
+        #mentions a:hover {
+            border-radius: 8px;
+            background-color: #00000020;
+        }
+        @media (max-width: 640px) {
+            #mentions p {
+                order: 0;
+                padding-bottom: 0px;
+            }
+            #mentions div {
+                display: block;
+            }
+            #mentions video {
+                margin: 4px 0px;
+                width: 100%;
+                height: auto;
+            }
+        }
+    </style>
+
 </head>
 
 <body>
-    <h1>I'm Rylan</h1>
-    <p>Chronic optimist. Simple guy. Just happy to be here. Gonna make a few things a little better before I go.</p>
+    <header>
+        <div>
+            <img src="header/avatar.jpg" srcset="header/avatar@2x.jpg 2x" />
+            <a href="https://twitter.com/schmylan" target="_blank">
+                <img src="header/twitter.svg" />
+            </a>
+            <a href="https://github.com/schmylan" target="_blank">
+                <img src="header/github.svg" />
+            </a>
+            <a href="https://openimage.com/schmylan" target="_blank">
+                <img src="header/oi.svg" />
+            </a>
+            <a href="https://dribbble.com/schmylan" target="_blank">
+                <img src="header/dribbble.svg" />
+            </a>
+            <a href="https://www.linkedin.com/in/rylanbarnes/" target="_blank">
+                <img src="header/linkedin.svg" />
+            </a>
+        </div>
+        <h1>I'm Rylan.</h1>
+        <p>Chronic optimist. Simple guy. Just happy to be here. Gonna make a few things a little better before I go.</p>
+    </header>
+
+    <section id="startups">
+        <h1>Startups</h1>
+
+        <ul>
+            <li id="shopsavvy">
+                <a href="http://tosto.re/shopsavvy" target="_blank">
+                    <h2>ShopSavvy</h2>
+                </a>
+                <div>
+                    <i>co-founder</i>
+                    <i>2008 - 2015</i>
+                    <i>now <a href="https://purch.com" target="_blank">Purch</a></i>
+                </div>
+                <h3>Buy better</h3>
+                <p>
+                    Mobile app for scanning barcodes, comparing prices and reading reviews.
+                </p>
+            </li>
+            <li id="openimage">
+                <a href="https://github.com/openimage" target="_blank">
+                    <h2>OpenImage</h2>
+                </a>
+                <div>
+                    <i>founder</i>
+                    <i>fall 2018</i>
+                </div>
+                <h3>Hack your images</h3>
+                <p>
+                    Code your designs into your images server-side. Never let your designs be limited by your platform.
+                </p>
+            </li>
+            <li id="xui">
+                <a href="https://github.com/branch9/xui" target="_blank">
+                    <h2>XUI</h2>
+                </a>
+                <div>
+                    <i>coming soon</i>
+                </div>
+                <h3>Democratizes app development</h3>
+                <p>
+                    Leverages modern Design Systems to simplify the way we build beautiful, cross-platform, native apps.
+                </p>
+            </li>
+            <li id="villagetable">
+                <a href="https://villagetable.com" target="_blank">
+                    <h2>Village Table</h2>
+                </a>
+                <div>
+                    <i>advisor</i>
+                    <i>2017</i>
+                </div>
+                <h3>Child &amp; family nutrition education</h3>
+                <p>
+                    Enabling lifelong, healthy eating habits for every child.
+                </p>
+            </li>
+            <li id="veryable">
+                <a href="https://veryableops.com" target="_blank">
+                    <h2>Veryable</h2>
+                </a>
+                <div>
+                    <i>investor</i>
+                    <i>2017</i>
+                </div>
+                <h3>On-demand labor marketplace</h3>
+                <p>
+                    Elastic labor for manufacturing and warehousing businesses while providing flexibility to workers.
+                </p>
+            </li>
+            <li id="spectrum">
+                <a href="https://spectrum.chat" target="_blank">
+                    <h2>Spectrum</h2>
+                </a>
+                <div>
+                    <i>investor</i>
+                    <i>2017</i>
+                </div>
+                <h3>Build better communities</h3>
+                <p>
+                    Spectrum makes it easy to create and grow your online community.
+                </p>
+            </li>
+            <!-- <li id="branch9">
+                <a href="https://github.com/branch9" target="_blank">
+                    <h2>Branch9</h2>
+                </a>
+                <h3>Open Source Incubator</h3>
+                <div>
+                    <i>founder</i>
+                    <i>2017</i>
+                </div>
+                <p>
+                    Here for the love of the craft. Focused on the intersection of design and engineering. (Currently incubating XUI and OpenImage.)
+                </p>
+            </li> -->
+        </ul>
+
+    </section>
+
+    <section id="interests">
+        <h1>Interests</h1>
+
+        <ul>
+            <li>
+                <h2>Engineering</h2>
+                <div>
+                    <figure>
+                        <a href="javascript:viewSlideshow([
+                        {
+                            src: 'interests/patents/1.jpg',
+                            w: 800,
+                            h: 600,
+                            title: 'Filed a patent for our work on QuickPay which lets you scan a barcode and then slide to pay.  It automates the checkout flow of any retailer with your stored wallet info.  Filed back in 2012 but still pending.  It does look like this one is going to go through though.  https://patents.google.com/patent/US20130297390A1'
+                        },
+                        {
+                            src: 'interests/patents/2.jpg',
+                            w: 800,
+                            h: 600,
+                            title: 'We built a pretty incredible price comparison search engine called ProductCloud (aka PriceNark).  We stopped pushing on this one though.  It’ll never go through.  https://patents.google.com/patent/US20130297464'
+                        }])">
+                            <img src="interests/patents/thumbnail.jpg" srcset="interests/patents/thumbnail@2x.jpg 2x" />
+                        </a>
+                        <figcaption>Patents</figcaption>
+                    </figure>
+                    <figure>
+                        <a href="javascript:viewSlideshow([
+                        {
+                            src: 'underconstruction.gif',
+                            w: 126,
+                            h: 105,
+                            title: 'Mmmm.  Bevels.  Where is my lens flare?'
+                        }])">
+                            <img src="interests/software/thumbnail.jpg" srcset="interests/software/thumbnail@2x.jpg 2x" />
+                        </a>
+                        <figcaption>Software</figcaption>
+                    </figure>
+                    <figure>
+                        <a href="javascript:viewSlideshow([
+                        {
+                            src: 'interests/hardware/1.jpg',
+                            w: 800,
+                            h: 600,
+                            title: 'From pixels to transistors, I cant help but take comfort in understanding the tech from top to bottom.  In college I led a team that built a physical chess board that could play you back…'
+                        },
+                        {
+                            src: 'interests/hardware/2.jpg',
+                            w: 800,
+                            h: 600,
+                            title: 'This was before the age of Raspberry Pis, so we programmed an FPGA board to control two servos that moved an electromagnet on an Etch-a-sketch type of actuator.  That was then plugged into a PC that ran a modified version of the WinBoard chess AI.'
+                        },
+                        {
+                            src: 'interests/hardware/3.jpg',
+                            w: 800,
+                            h: 630,
+                            title: 'Here’s some sped-up footage of the AI playing itself.'
+                        },
+                        {
+                            src: 'interests/hardware/4.jpg',
+                            w: 600,
+                            h: 800,
+                            title: 'Been in the cloud since 2008 and while I love it as much as the next person, nothing gets me as excited as owning my own metal.  The performance junkie in me loves squeezing out every last drop of speed.'
+                        },
+                        {
+                            src: 'interests/hardware/5.jpg',
+                            w: 600,
+                            h: 800,
+                            title: 'At ShopSavvy we used a hybrid cloud/colo setup between AWS and our data center in Dallas.   We saved a bundle on our big data clusters.'
+                        }])">
+                            <img src="interests/hardware/thumbnail.jpg" srcset="interests/hardware/thumbnail@2x.jpg 2x" />
+                        </a>
+                        <figcaption>Hardware</figcaption>
+                    </figure>
+                </div>
+            </li>
+            <li>
+                <h2>Design</h2>
+                <div>
+                    <figure>
+                        <a href="javascript:viewSlideshow([
+                        {
+                            src: 'underconstruction.gif',
+                            w: 126,
+                            h: 105,
+                            title: 'Mmmm.  Bevels.  Where is my lens flare?'
+                        }])">
+                            <img src="interests/uiux/thumbnail.jpg" srcset="interests/uiux/thumbnail@2x.jpg 2x" />
+                        </a>
+                        <figcaption>UI / UX</figcaption>
+                    </figure>
+                    <figure>
+                        <a href="javascript:viewSlideshow([
+                        {
+                            src: 'underconstruction.gif',
+                            w: 126,
+                            h: 105,
+                            title: 'Mmmm.  Bevels.  Where is my lens flare?'
+                        }])">
+                            <img src="interests/animation/thumbnail.jpg" srcset="interests/animation/thumbnail@2x.jpg 2x" />
+                        </a>
+                        <figcaption>Animation</figcaption>
+                    </figure>
+                    <figure>
+                        <a href="javascript:viewSlideshow([
+                        {
+                            src: 'underconstruction.gif',
+                            w: 126,
+                            h: 105,
+                            title: 'Mmmm.  Bevels.  Where is my lens flare?'
+                        }])">
+                            <img src="interests/illustration/thumbnail.jpg" srcset="interests/illustration/thumbnail@2x.jpg 2x" />
+                        </a>
+                        <figcaption>Illustration</figcaption>
+                    </figure>
+                </div>
+            </li>
+            <li>
+                <h2>Mobile</h2>
+                <div>
+                    <figure>
+                        <a href="javascript:viewSlideshow([
+                        {
+                            src: 'underconstruction.gif',
+                            w: 126,
+                            h: 105,
+                            title: 'Mmmm.  Bevels.  Where is my lens flare?'
+                        }])">
+                            <img src="interests/shopsavvy/thumbnail.jpg" srcset="interests/shopsavvy/thumbnail@2x.jpg 2x" />
+                        </a>
+                        <figcaption>ShopSavvy</figcaption>
+                    </figure>
+                    <figure>
+                        <a href="javascript:viewSlideshow([
+                        {
+                            src: 'underconstruction.gif',
+                            w: 126,
+                            h: 105,
+                            title: 'Mmmm.  Bevels.  Where is my lens flare?'
+                        }])">
+                            <img src="interests/product/thumbnail.jpg" srcset="interests/product/thumbnail@2x.jpg 2x" />
+                        </a>
+                        <figcaption>Product</figcaption>
+                    </figure>
+                    <figure>
+                        <a href="javascript:viewSlideshow([
+                        {
+                            src: 'interests/speaking/sxsw.jpg',
+                            w: 800,
+                            h: 600,
+                            title: 'Speaking at SXSW back in 2010. Back then there were 7 major smartphone platforms, most folks in the room still had flip phones and Blackberry still sold more smartphones than anybody else. I described the differences between each platform using comic book characters.  It was only a little bit funny.'
+                        },
+                        {
+                            src: 'interests/speaking/paypalx.jpg',
+                            w: 800,
+                            h: 600,
+                            title: 'baslkj asldfkj sdflksdflkj sflksdlkjdsglks flkj slks fl'
+                        },
+                        {
+                            src: 'interests/speaking/irce.jpg',
+                            w: 800,
+                            h: 600,
+                            title: 'baslkj asldfkj sdflksdflkj sflksdlkjdsglks flkj slks fl'
+                        }])">
+                            <img src="interests/speaking/thumbnail.jpg" srcset="interests/speaking/thumbnail@2x.jpg 2x" />
+                        </a>
+                        <figcaption>Speaking</figcaption>
+                    </figure>
+                    <figure>
+                        <a href="javascript:viewSlideshow([
+                        {
+                            src: 'underconstruction.gif',
+                            w: 126,
+                            h: 105,
+                            title: 'Mmmm.  Bevels.  Where is my lens flare?'
+                        }])">
+                            <img src="interests/awards/thumbnail.jpg" srcset="interests/awards/thumbnail@2x.jpg 2x" />
+                        </a>
+                        <figcaption>Awards</figcaption>
+                    </figure>
+                </div>
+            </li>
+            <li>
+                <h2>Graphics</h2>
+                <div>
+                    <figure>
+                        <a href="javascript:viewSlideshow([
+                        {
+                            src: 'underconstruction.gif',
+                            w: 126,
+                            h: 105,
+                            title: 'Mmmm.  Bevels.  Where is my lens flare?'
+                        }])">
+                            <img src="interests/meatloaf/thumbnail.jpg" srcset="interests/meatloaf/thumbnail@2x.jpg 2x" />
+                        </a>
+                        <figcaption>Meatloaf</figcaption>
+                    </figure>
+                    <figure>
+                        <a href="javascript:viewSlideshow([
+                        {
+                            src: 'underconstruction.gif',
+                            w: 126,
+                            h: 105,
+                            title: 'Mmmm.  Bevels.  Where is my lens flare?'
+                        }])">
+                            <img src="interests/ximage/thumbnail.jpg" srcset="interests/ximage/thumbnail@2x.jpg 2x" />
+                        </a>
+                        <figcaption>XImage</figcaption>
+                    </figure>
+                </div>
+            </li>
+            <li>
+                <h2>Startups</h2>
+                <div>
+                    <figure>
+                        <a href="javascript:viewSlideshow([
+                        {
+                            src: 'underconstruction.gif',
+                            w: 126,
+                            h: 105,
+                            title: 'Mmmm.  Bevels.  Where is my lens flare?'
+                        }])">
+                            <img src="interests/texas/thumbnail.jpg" srcset="interests/texas/thumbnail@2x.jpg 2x" />
+                        </a>
+                        <figcaption>Texas</figcaption>
+                    </figure>
+                    <figure>
+                        <a href="javascript:viewSlideshow([
+                        {
+                            src: 'underconstruction.gif',
+                            w: 126,
+                            h: 105,
+                            title: 'Mmmm.  Bevels.  Where is my lens flare?'
+                        }])">
+                            <img src="interests/sanfrancisco/thumbnail.jpg" srcset="interests/sanfrancisco/thumbnail@2x.jpg 2x" />
+                        </a>
+                        <figcaption>San Francisco</figcaption>
+                    </figure>
+                </div>
+            </li>
+        </ul>
+
+    </section>
+
+    <section id="mentions">
+        <h1>Mentions</h1>
+
+        <ul>
+            <li id="nytimes">
+                <blockquote cite="https://nyti.ms/2E7jlJ1">
+                    <p>
+                        In the past I've relied mostly on the ShopSavvy app
+                    </p>
+                    <cite>The New York Times</cite>
+                </blockquote>
+            </li>
+
+            <li id="washingtonpost">
+                <blockquote cite="http://wapo.st/1bn97ih">
+                    <p>
+                        ShopSavvy has become a secret weapon of sorts for bargain hunters
+                    </p>
+                    <cite>The Washington Post</cite>
+                </blockquote>
+            </li>
+
+            <li id="time">
+                <blockquote cite="http://ti.me/1fhRwsQ">
+                    <p>
+                        A must-have for professional bargain hunters
+                    </p>
+                    <cite>Time</cite>
+                </blockquote>
+            </li>
+
+            <li id="wsj">
+                <blockquote cite="https://www.wsj.com/articles/SB10001424052702303933704577532944286016810">
+                    <p>
+                        In addition to comparing prices, ShopSavvy makes it easy to purchase items from select websites
+                    </p>
+                    <cite>The Wall Street Journal</cite>
+                </blockquote>
+            </li>
+
+            <li id="techcrunch">
+                <blockquote cite="https://techcrunch.com/2009/11/17/shopsavvy-iphone/">
+                    <p>
+                        ShopSavvy was one of the best early Android applications
+                    </p>
+                    <cite>TechCrunch</cite>
+                </blockquote>
+            </li>
+        </ul>
+        <div>
+            <video poster="mentions/jimmyfallon.png">
+                <source src="mentions/tmobile .mp4" type="video/mp4" />
+                <p>Your browser doesn't seem to support the video tag.</p>
+            </video>
+            <video poster="mentions/tmobile.png">
+                <source src="mentions/tmobile.mpg" type="video/mp4" />
+                <p>Your browser doesn't seem to support the video tag.</p>
+            </video>
+            <video poster="mentions/andersoncooper.png">
+                <source src="mentions/andersoncooper.mp4" type="video/mp4" />
+                <p>Your browser doesn't seem to support the video tag.</p>
+            </video>
+            <video poster="mentions/goodmorningamerica.png">
+                <source src="mentions/goodmorningamerica.wmv" type="video/mp4" />
+                <p>Your browser doesn't seem to support the video tag.</p>
+            </video>
+            <video poster="mentions/droz.png">
+                <source src="mentions/droz.mpg" type="video/mp4" />
+                <p>Your browser doesn't seem to support the video tag.</p>
+            </video>
+            <video poster="mentions/todayshow.png">
+                <source src="mentions/todayshow.mp4" type="video/mp4" />
+                <p>Your browser doesn't seem to support the video tag.</p>
+            </video>
+        </div>
+        <a href="#">more videos</a>
+
+    </section>
+
+    <footer>&copy; 2018 Rylan Barnes</footer>
+
+    <!-- Root element of PhotoSwipe. Must have class pswp. -->
+    <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+            <!-- Background of PhotoSwipe. 
+                It's a separate element as animating opacity is faster than rgba(). -->
+            <div class="pswp__bg"></div>
+        
+            <!-- Slides wrapper with overflow:hidden. -->
+            <div class="pswp__scroll-wrap">
+        
+                <!-- Container that holds slides. 
+                    PhotoSwipe keeps only 3 of them in the DOM to save memory.
+                    Don't modify these 3 pswp__item elements, data is added later on. -->
+                <div class="pswp__container">
+                    <div class="pswp__item"></div>
+                    <div class="pswp__item"></div>
+                    <div class="pswp__item"></div>
+                </div>
+        
+                <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+                <div class="pswp__ui pswp__ui--hidden">
+        
+                    <div class="pswp__top-bar">
+        
+                        <!--  Controls are self-explanatory. Order can be changed. -->
+        
+                        <div class="pswp__counter"></div>
+        
+                        <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                
+                        <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                        <!-- element will get class pswp__preloader--active when preloader is running -->
+                        <div class="pswp__preloader">
+                            <div class="pswp__preloader__icn">
+                            <div class="pswp__preloader__cut">
+                                <div class="pswp__preloader__donut"></div>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                        <div class="pswp__share-tooltip"></div> 
+                    </div>
+        
+                    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+                    </button>
+        
+                    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+                    </button>
+        
+                    <div class="pswp__caption">
+                        <div class="pswp__caption__center"></div>
+                    </div>
+        
+                </div>
+        
+            </div>
+        
+        </div>
+
+        <script>
+            function viewSlideshow(items) {
+                var pswpElement = document.querySelectorAll('.pswp')[0];
+    
+                // build items array
+                // var items = [
+                //     {
+                //         src: 'https://placekitten.com/600/400',
+                //         w: 600,
+                //         h: 400
+                //     },
+                //     {
+                //         src: 'https://placekitten.com/1200/900',
+                //         w: 1200,
+                //         h: 900
+                //     }
+                // ];
+    
+                // define options (if needed)
+                var options = {
+                    // optionName: 'option value'
+                    // for example:
+                    index: 0, // start at first slide
+                    loop: false
+                };
+    
+                // Initializes and opens PhotoSwipe
+                var gallery = new PhotoSwipe( pswpElement, PhotoSwipeUI_Default, items, options);
+                gallery.init();
+            }
+        </script>
+        
 </body>
 
 </html>
