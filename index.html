@@ -350,6 +350,7 @@
             display: flex;
             flex-flow: row wrap;
             justify-content: center;
+            align-items: center;
         }
         #mentions p {
             order: 1;
@@ -386,6 +387,15 @@
             margin: 16px;
             border-radius: 8px;
             box-shadow: 0 16px 32px #00000060;
+        }
+        video::-webkit-media-controls {
+            /* filter: brightness(0.5); */
+            /* filter: invert(); */
+            /* filter: opacity(.5); */
+        }
+        video::-webkit-media-controls-panel {
+            background-color: black;
+            filter: opacity(.5);
         }
         #mentions a {
             display: block;
@@ -834,28 +844,28 @@
             </li>
         </ul>
         <div>
-            <video poster="mentions/jimmyfallon.png">
-                <source src="mentions/tmobile .mp4" type="video/mp4" />
+            <video poster="mentions/jimmyfallon.jpg" controls="true" preload="none">
+                <source src="mentions/jimmyfallon.mp4" type="video/mp4" />
                 <p>Your browser doesn't seem to support the video tag.</p>
             </video>
-            <video poster="mentions/tmobile.png">
-                <source src="mentions/tmobile.mpg" type="video/mp4" />
+            <video poster="mentions/tmobile.png" controls>
+                <source src="mentions/tmobile.mp4" type="video/mp4" />
                 <p>Your browser doesn't seem to support the video tag.</p>
             </video>
-            <video poster="mentions/andersoncooper.png">
+            <video poster="mentions/andersoncooper.jpg" controls>
                 <source src="mentions/andersoncooper.mp4" type="video/mp4" />
                 <p>Your browser doesn't seem to support the video tag.</p>
             </video>
-            <video poster="mentions/goodmorningamerica.png">
+            <video poster="mentions/goodmorningamerica.jpg" controls>
                 <source src="mentions/goodmorningamerica.wmv" type="video/mp4" />
                 <p>Your browser doesn't seem to support the video tag.</p>
             </video>
-            <video poster="mentions/droz.png">
-                <source src="mentions/droz.mpg" type="video/mp4" />
+            <video poster="mentions/todayshow.jpg" controls>
+                <source src="mentions/todayshow.mp4" type="video/mp4" />
                 <p>Your browser doesn't seem to support the video tag.</p>
             </video>
-            <video poster="mentions/todayshow.png">
-                <source src="mentions/todayshow.mp4" type="video/mp4" />
+            <video poster="mentions/droz.jpg" controls>
+                <source src="mentions/droz.mp4" type="video/mp4" />
                 <p>Your browser doesn't seem to support the video tag.</p>
             </video>
         </div>
