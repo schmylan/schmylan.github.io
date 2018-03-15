@@ -52,6 +52,11 @@
             background-color: #eee;
             margin: auto;
         }
+        h3 {
+            font-size: 18px;
+            text-transform: uppercase;
+            /* font-weight: bold; */
+        }
         p {
             color: #333;
             font-size: 18px;
@@ -148,9 +153,6 @@
             margin: 0px 32px 32px 32px;
         }
         #startups h3 {
-            font-size: 16px;
-            /* font-weight: bold; */
-            text-transform: uppercase;
             margin: 0px 32px;
         }
         #startups div {
@@ -264,30 +266,39 @@
 
         #interests li {
             list-style: none;
-            text-align: right;
+        }
+        #interests > ul {
+            max-width: 1024px;
+            margin: auto;
+            padding: 16px;
+        }
+        #interests > ul > li {
             display: flex;
-            flex-flow: row wrap;
-            justify-content: center;
-            align-items: flex-start;
+            flex-flow: row nowrap;
+            margin: 32px 0px;
         }
-        #interests h2 {
-            color: #666;
-            margin: 64px 32px;
-            text-align: left;
-            display: inline-block;
-            min-width: 176px;
+        #engineering    h3 { color: #4269DF; }
+        #design         h3 { color: #1FA95C; }
+        #mobile         h3 { color: #8495AD; }
+        #graphics       h3 { color: #C0120F; }
+        #start_ups      h3 { color: #865C50; }
+        #interests h3 {
+            margin: 0px 32px;
         }
-        #interests li > div {
+        #interests p {
+            margin: 0px 32px;
+            width: 256px;
+        }
+        #interests li > ul {
             width: 768px;
+            margin-top: 44px;
             display: flex;
             flex-flow: row wrap;
             justify-content: flex-end;
-            margin-bottom: 48px;
         }
         #interests figure {
             display: inline-block;
-            width: 187px;
-            height: 256px;
+            width: 168px;
             text-align: center;
         }
         #interests img {
@@ -320,23 +331,35 @@
         }
         #interests figcaption {
             text-align: center;
-            font-size: 24px;
+            font-size: 22px;
             padding: 16px;
+            color: #333;
         }
         @media (max-width: 1024px) {
-            #interests li {
-                justify-content: flex-start;
+            #interests > ul > li {
+                flex-flow: column nowrap;
+                height: auto;
+                margin-bottom: 96px;
             }
-            #interests li > div {
+            /* #interests div {
+                order: 1;
+            } */
+            #interests p {
+                width: auto;
+            }
+            #interests li > ul {
                 width: 100%;
                 justify-content: flex-start;
-                margin-bottom: 0px;
+            }
+        }
+        @media (max-width: 768px) {
+            #interests li > ul {
+                justify-content: space-between;
             }
         }
         @media (max-width: 374px) {
             #interests figure {
-                width: 158px;
-                height: 224px;
+                width: auto;
             }
         }
 
@@ -556,240 +579,293 @@
         <h1>Interests</h1>
 
         <ul>
-            <li>
-                <h2>Engineering</h2>
+            <li id="engineering">
                 <div>
-                    <figure>
-                        <a href="javascript:viewSlideshow([
-                        {
-                            src: 'interests/patents/1.jpg',
-                            w: 800,
-                            h: 600,
-                            title: 'Filed a patent for our work on QuickPay which lets you scan a barcode and then slide to pay.  It automates the checkout flow of any retailer with your stored wallet info.  Filed back in 2012 but still pending.  It does look like this one is going to go through though.  https://patents.google.com/patent/US20130297390A1'
-                        },
-                        {
-                            src: 'interests/patents/2.jpg',
-                            w: 800,
-                            h: 600,
-                            title: 'We built a pretty incredible price comparison search engine called ProductCloud (aka PriceNark).  We stopped pushing on this one though.  It’ll never go through.  https://patents.google.com/patent/US20130297464'
-                        }])">
-                            <img src="interests/patents/thumbnail.jpg" srcset="interests/patents/thumbnail@2x.jpg 2x" />
-                        </a>
-                        <figcaption>Patents</figcaption>
-                    </figure>
-                    <figure>
-                        <a href="javascript:viewSlideshow([
-                        {
-                            src: 'underconstruction.gif',
-                            w: 126,
-                            h: 105,
-                            title: 'Mmmm.  Bevels.  Where is my lens flare?'
-                        }])">
-                            <img src="interests/software/thumbnail.jpg" srcset="interests/software/thumbnail@2x.jpg 2x" />
-                        </a>
-                        <figcaption>Software</figcaption>
-                    </figure>
-                    <figure>
-                        <a href="javascript:viewSlideshow([
-                        {
-                            src: 'interests/hardware/1.jpg',
-                            w: 800,
-                            h: 600,
-                            title: 'From pixels to transistors, I cant help but take comfort in understanding the tech from top to bottom.  In college I led a team that built a physical chess board that could play you back…'
-                        },
-                        {
-                            src: 'interests/hardware/2.jpg',
-                            w: 800,
-                            h: 600,
-                            title: 'This was before the age of Raspberry Pis, so we programmed an FPGA board to control two servos that moved an electromagnet on an Etch-a-sketch type of actuator.  That was then plugged into a PC that ran a modified version of the WinBoard chess AI.'
-                        },
-                        {
-                            src: 'interests/hardware/3.jpg',
-                            w: 800,
-                            h: 630,
-                            title: 'Here’s some sped-up footage of the AI playing itself.'
-                        },
-                        {
-                            src: 'interests/hardware/4.jpg',
-                            w: 600,
-                            h: 800,
-                            title: 'Been in the cloud since 2008 and while I love it as much as the next person, nothing gets me as excited as owning my own metal.  The performance junkie in me loves squeezing out every last drop of speed.'
-                        },
-                        {
-                            src: 'interests/hardware/5.jpg',
-                            w: 600,
-                            h: 800,
-                            title: 'At ShopSavvy we used a hybrid cloud/colo setup between AWS and our data center in Dallas.   We saved a bundle on our big data clusters.'
-                        }])">
-                            <img src="interests/hardware/thumbnail.jpg" srcset="interests/hardware/thumbnail@2x.jpg 2x" />
-                        </a>
-                        <figcaption>Hardware</figcaption>
-                    </figure>
+                    <h3>Engineering</h3>
+                    <p>
+                        Building is my passion.  Learning how something new works, at any layer of the stack, brings me peace of mind.
+                    </p>
                 </div>
+                <ul>
+                    <li>
+                        <figure>
+                            <a href="javascript:viewSlideshow([
+                            {
+                                src: 'underconstruction.gif',
+                                w: 126,
+                                h: 105,
+                                title: 'Mmmm.  Bevels.  Where is my lens flare?'
+                            }])">
+                                <img src="interests/software/thumbnail.jpg" srcset="interests/software/thumbnail@2x.jpg 2x" />
+                            </a>
+                            <figcaption>Software</figcaption>
+                        </figure>
+                    </li>
+                    <li>
+                        <figure>
+                            <a href="javascript:viewSlideshow([
+                            {
+                                src: 'interests/hardware/1.jpg',
+                                w: 800,
+                                h: 600,
+                                title: 'From pixels to transistors, I cant help but take comfort in understanding the tech from top to bottom.  In college I led a team that built a physical chess board that could play you back…'
+                            },
+                            {
+                                src: 'interests/hardware/2.jpg',
+                                w: 800,
+                                h: 600,
+                                title: 'This was before the age of Raspberry Pis, so we programmed an FPGA board to control two servos that moved an electromagnet on an Etch-a-sketch type of actuator.  That was then plugged into a PC that ran a modified version of the WinBoard chess AI.'
+                            },
+                            {
+                                src: 'interests/hardware/3.jpg',
+                                w: 800,
+                                h: 630,
+                                title: 'Here’s some sped-up footage of the AI playing itself.'
+                            },
+                            {
+                                src: 'interests/hardware/4.jpg',
+                                w: 600,
+                                h: 800,
+                                title: 'Been in the cloud since 2008 and while I love it as much as the next person, nothing gets me as excited as owning my own metal.  The performance junkie in me loves squeezing out every last drop of speed.'
+                            },
+                            {
+                                src: 'interests/hardware/5.jpg',
+                                w: 600,
+                                h: 800,
+                                title: 'At ShopSavvy we used a hybrid cloud/colo setup between AWS and our data center in Dallas.   We saved a bundle on our big data clusters.'
+                            }])">
+                                <img src="interests/hardware/thumbnail.jpg" srcset="interests/hardware/thumbnail@2x.jpg 2x" />
+                            </a>
+                            <figcaption>Hardware</figcaption>
+                        </figure>
+                    </li>
+                    <li>
+                        <figure>
+                            <a href="javascript:viewSlideshow([
+                            {
+                                src: 'interests/patents/1.jpg',
+                                w: 800,
+                                h: 600,
+                                title: 'Filed a patent for our work on QuickPay which lets you scan a barcode and then slide to pay.  It automates the checkout flow of any retailer with your stored wallet info.  Filed back in 2012 but still pending.  It does look like this one is going to go through though.  https://patents.google.com/patent/US20130297390A1'
+                            },
+                            {
+                                src: 'interests/patents/2.jpg',
+                                w: 800,
+                                h: 600,
+                                title: 'We built a pretty incredible price comparison search engine called ProductCloud (aka PriceNark).  We stopped pushing on this one though.  It’ll never go through.  https://patents.google.com/patent/US20130297464'
+                            }])">
+                                <img src="interests/patents/thumbnail.jpg" srcset="interests/patents/thumbnail@2x.jpg 2x" />
+                            </a>
+                            <figcaption>Patents</figcaption>
+                        </figure>
+                    </li>
+                </ul>
             </li>
-            <li>
-                <h2>Design</h2>
+            <li id="design">
                 <div>
-                    <figure>
-                        <a href="javascript:viewSlideshow([
-                        {
-                            src: 'underconstruction.gif',
-                            w: 126,
-                            h: 105,
-                            title: 'Mmmm.  Bevels.  Where is my lens flare?'
-                        }])">
-                            <img src="interests/uiux/thumbnail.jpg" srcset="interests/uiux/thumbnail@2x.jpg 2x" />
-                        </a>
-                        <figcaption>UI / UX</figcaption>
-                    </figure>
-                    <figure>
-                        <a href="javascript:viewSlideshow([
-                        {
-                            src: 'underconstruction.gif',
-                            w: 126,
-                            h: 105,
-                            title: 'Mmmm.  Bevels.  Where is my lens flare?'
-                        }])">
-                            <img src="interests/animation/thumbnail.jpg" srcset="interests/animation/thumbnail@2x.jpg 2x" />
-                        </a>
-                        <figcaption>Animation</figcaption>
-                    </figure>
-                    <figure>
-                        <a href="javascript:viewSlideshow([
-                        {
-                            src: 'underconstruction.gif',
-                            w: 126,
-                            h: 105,
-                            title: 'Mmmm.  Bevels.  Where is my lens flare?'
-                        }])">
-                            <img src="interests/illustration/thumbnail.jpg" srcset="interests/illustration/thumbnail@2x.jpg 2x" />
-                        </a>
-                        <figcaption>Illustration</figcaption>
-                    </figure>
+                    <h3>Design</h3>
+                    <p>
+                        I'm still new to design.  Starting ShopSavvy forced me to dig in.  All my work here has been very mobile-centric.
+                    </p>
                 </div>
+                <ul>
+                    <li>
+                        <figure>
+                            <a href="javascript:viewSlideshow([
+                            {
+                                src: 'underconstruction.gif',
+                                w: 126,
+                                h: 105,
+                                title: 'Mmmm.  Bevels.  Where is my lens flare?'
+                            }])">
+                                <img src="interests/uiux/thumbnail.jpg" srcset="interests/uiux/thumbnail@2x.jpg 2x" />
+                            </a>
+                            <figcaption>UI / UX</figcaption>
+                        </figure>
+                    </li>
+                    <li>
+                        <figure>
+                            <a href="javascript:viewSlideshow([
+                            {
+                                src: 'underconstruction.gif',
+                                w: 126,
+                                h: 105,
+                                title: 'Mmmm.  Bevels.  Where is my lens flare?'
+                            }])">
+                                <img src="interests/animation/thumbnail.jpg" srcset="interests/animation/thumbnail@2x.jpg 2x" />
+                            </a>
+                            <figcaption>Animation</figcaption>
+                        </figure>
+                    </li>
+                    <li>
+                        <figure>
+                            <a href="javascript:viewSlideshow([
+                            {
+                                src: 'underconstruction.gif',
+                                w: 126,
+                                h: 105,
+                                title: 'Mmmm.  Bevels.  Where is my lens flare?'
+                            }])">
+                                <img src="interests/illustration/thumbnail.jpg" srcset="interests/illustration/thumbnail@2x.jpg 2x" />
+                            </a>
+                            <figcaption>Illustration</figcaption>
+                        </figure>
+                    </li>
+                </ul>
             </li>
-            <li>
-                <h2>Mobile</h2>
+            <li id="mobile">
                 <div>
-                    <figure>
-                        <a href="javascript:viewSlideshow([
-                        {
-                            src: 'underconstruction.gif',
-                            w: 126,
-                            h: 105,
-                            title: 'Mmmm.  Bevels.  Where is my lens flare?'
-                        }])">
-                            <img src="interests/shopsavvy/thumbnail.jpg" srcset="interests/shopsavvy/thumbnail@2x.jpg 2x" />
-                        </a>
-                        <figcaption>ShopSavvy</figcaption>
-                    </figure>
-                    <figure>
-                        <a href="javascript:viewSlideshow([
-                        {
-                            src: 'underconstruction.gif',
-                            w: 126,
-                            h: 105,
-                            title: 'Mmmm.  Bevels.  Where is my lens flare?'
-                        }])">
-                            <img src="interests/product/thumbnail.jpg" srcset="interests/product/thumbnail@2x.jpg 2x" />
-                        </a>
-                        <figcaption>Product</figcaption>
-                    </figure>
-                    <figure>
-                        <a href="javascript:viewSlideshow([
-                        {
-                            src: 'interests/speaking/sxsw.jpg',
-                            w: 800,
-                            h: 600,
-                            title: 'Speaking at SXSW back in 2010. Back then there were 7 major smartphone platforms, most folks in the room still had flip phones and Blackberry still sold more smartphones than anybody else. I described the differences between each platform using comic book characters.  It was only a little bit funny.'
-                        },
-                        {
-                            src: 'interests/speaking/paypalx.jpg',
-                            w: 800,
-                            h: 600,
-                            title: 'baslkj asldfkj sdflksdflkj sflksdlkjdsglks flkj slks fl'
-                        },
-                        {
-                            src: 'interests/speaking/irce.jpg',
-                            w: 800,
-                            h: 600,
-                            title: 'baslkj asldfkj sdflksdflkj sflksdlkjdsglks flkj slks fl'
-                        }])">
-                            <img src="interests/speaking/thumbnail.jpg" srcset="interests/speaking/thumbnail@2x.jpg 2x" />
-                        </a>
-                        <figcaption>Speaking</figcaption>
-                    </figure>
-                    <figure>
-                        <a href="javascript:viewSlideshow([
-                        {
-                            src: 'underconstruction.gif',
-                            w: 126,
-                            h: 105,
-                            title: 'Mmmm.  Bevels.  Where is my lens flare?'
-                        }])">
-                            <img src="interests/awards/thumbnail.jpg" srcset="interests/awards/thumbnail@2x.jpg 2x" />
-                        </a>
-                        <figcaption>Awards</figcaption>
-                    </figure>
+                    <h3>Mobile</h3>
+                    <p>
+                        Started developing with flip phones but when smartphones landed, I dropped everything and jumped into my first startup.
+                    </p>
                 </div>
+                <ul>
+                    <li>
+                        <figure>
+                            <a href="javascript:viewSlideshow([
+                            {
+                                src: 'underconstruction.gif',
+                                w: 126,
+                                h: 105,
+                                title: 'Mmmm.  Bevels.  Where is my lens flare?'
+                            }])">
+                                <img src="interests/shopsavvy/thumbnail.jpg" srcset="interests/shopsavvy/thumbnail@2x.jpg 2x" />
+                            </a>
+                            <figcaption>ShopSavvy</figcaption>
+                        </figure>
+                    </li>
+                    <li>
+                        <figure>
+                            <a href="javascript:viewSlideshow([
+                            {
+                                src: 'underconstruction.gif',
+                                w: 126,
+                                h: 105,
+                                title: 'Mmmm.  Bevels.  Where is my lens flare?'
+                            }])">
+                                <img src="interests/product/thumbnail.jpg" srcset="interests/product/thumbnail@2x.jpg 2x" />
+                            </a>
+                            <figcaption>Product</figcaption>
+                        </figure>
+                    </li>
+                    <li>
+                        <figure>
+                            <a href="javascript:viewSlideshow([
+                            {
+                                src: 'interests/speaking/sxsw.jpg',
+                                w: 800,
+                                h: 600,
+                                title: 'Speaking at SXSW back in 2010. Back then there were 7 major smartphone platforms, most folks in the room still had flip phones and Blackberry still sold more smartphones than anybody else. I described the differences between each platform using comic book characters.  It was only a little bit funny.'
+                            },
+                            {
+                                src: 'interests/speaking/paypalx.jpg',
+                                w: 800,
+                                h: 600,
+                                title: 'baslkj asldfkj sdflksdflkj sflksdlkjdsglks flkj slks fl'
+                            },
+                            {
+                                src: 'interests/speaking/irce.jpg',
+                                w: 800,
+                                h: 600,
+                                title: 'baslkj asldfkj sdflksdflkj sflksdlkjdsglks flkj slks fl'
+                            }])">
+                                <img src="interests/speaking/thumbnail.jpg" srcset="interests/speaking/thumbnail@2x.jpg 2x" />
+                            </a>
+                            <figcaption>Speaking</figcaption>
+                        </figure>
+                    </li>
+                    <li>
+                        <figure>
+                            <a href="javascript:viewSlideshow([
+                            {
+                                src: 'underconstruction.gif',
+                                w: 126,
+                                h: 105,
+                                title: 'Mmmm.  Bevels.  Where is my lens flare?'
+                            }])">
+                                <img src="interests/awards/thumbnail.jpg" srcset="interests/awards/thumbnail@2x.jpg 2x" />
+                            </a>
+                            <figcaption>Awards</figcaption>
+                        </figure>
+                    </li>
+                </ul>
             </li>
-            <li>
-                <h2>Graphics</h2>
+            <li id="graphics">
                 <div>
-                    <figure>
-                        <a href="javascript:viewSlideshow([
-                        {
-                            src: 'underconstruction.gif',
-                            w: 126,
-                            h: 105,
-                            title: 'Mmmm.  Bevels.  Where is my lens flare?'
-                        }])">
-                            <img src="interests/meatloaf/thumbnail.jpg" srcset="interests/meatloaf/thumbnail@2x.jpg 2x" />
-                        </a>
-                        <figcaption>Meatloaf</figcaption>
-                    </figure>
-                    <figure>
-                        <a href="javascript:viewSlideshow([
-                        {
-                            src: 'underconstruction.gif',
-                            w: 126,
-                            h: 105,
-                            title: 'Mmmm.  Bevels.  Where is my lens flare?'
-                        }])">
-                            <img src="interests/ximage/thumbnail.jpg" srcset="interests/ximage/thumbnail@2x.jpg 2x" />
-                        </a>
-                        <figcaption>XImage</figcaption>
-                    </figure>
+                    <h3>Graphics</h3>
+                    <p>
+                        I keep letting myself get pulled into low-level graphics projects.  Fun intersection between engineering and design.
+                    </p>
                 </div>
+                <ul>
+                    <li>
+                        <figure>
+                            <a href="javascript:viewSlideshow([
+                            {
+                                src: 'underconstruction.gif',
+                                w: 126,
+                                h: 105,
+                                title: 'Mmmm.  Bevels.  Where is my lens flare?'
+                            }])">
+                                <img src="interests/meatloaf/thumbnail.jpg" srcset="interests/meatloaf/thumbnail@2x.jpg 2x" />
+                            </a>
+                            <figcaption>Meatloaf</figcaption>
+                        </figure>
+                    </li>
+                    <li>
+                        <figure>
+                            <a href="javascript:viewSlideshow([
+                            {
+                                src: 'underconstruction.gif',
+                                w: 126,
+                                h: 105,
+                                title: 'Mmmm.  Bevels.  Where is my lens flare?'
+                            }])">
+                                <img src="interests/ximage/thumbnail.jpg" srcset="interests/ximage/thumbnail@2x.jpg 2x" />
+                            </a>
+                            <figcaption>XImage</figcaption>
+                        </figure>
+                    </li>
+                </ul>
             </li>
-            <li>
-                <h2>Startups</h2>
+            <li id="start_ups">
                 <div>
-                    <figure>
-                        <a href="javascript:viewSlideshow([
-                        {
-                            src: 'underconstruction.gif',
-                            w: 126,
-                            h: 105,
-                            title: 'Mmmm.  Bevels.  Where is my lens flare?'
-                        }])">
-                            <img src="interests/texas/thumbnail.jpg" srcset="interests/texas/thumbnail@2x.jpg 2x" />
-                        </a>
-                        <figcaption>Texas</figcaption>
-                    </figure>
-                    <figure>
-                        <a href="javascript:viewSlideshow([
-                        {
-                            src: 'underconstruction.gif',
-                            w: 126,
-                            h: 105,
-                            title: 'Mmmm.  Bevels.  Where is my lens flare?'
-                        }])">
-                            <img src="interests/sanfrancisco/thumbnail.jpg" srcset="interests/sanfrancisco/thumbnail@2x.jpg 2x" />
-                        </a>
-                        <figcaption>San Francisco</figcaption>
-                    </figure>
+                    <h3>Startups</h3>
+                    <p>
+                        ShopSavvy was born in Texas but grew up in the heart of Soma, San Francisco.
+                    </p>
                 </div>
+                <ul>
+                    <li>
+                        <figure>
+                            <a href="javascript:viewSlideshow([
+                            {
+                                src: 'underconstruction.gif',
+                                w: 126,
+                                h: 105,
+                                title: 'Mmmm.  Bevels.  Where is my lens flare?'
+                            }])">
+                                <img src="interests/texas/thumbnail.jpg" srcset="interests/texas/thumbnail@2x.jpg 2x" />
+                            </a>
+                            <figcaption>Texas</figcaption>
+                        </figure>
+                    </li>
+                    <li>
+                        <figure>
+                            <a href="javascript:viewSlideshow([
+                            {
+                                src: 'underconstruction.gif',
+                                w: 126,
+                                h: 105,
+                                title: 'Mmmm.  Bevels.  Where is my lens flare?'
+                            }])">
+                                <img src="interests/sanfrancisco/thumbnail.jpg" srcset="interests/sanfrancisco/thumbnail@2x.jpg 2x" />
+                            </a>
+                            <figcaption>San Francisco</figcaption>
+                        </figure>
+                    </li>
+                </ul>
             </li>
         </ul>
 
