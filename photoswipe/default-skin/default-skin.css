@@ -276,7 +276,7 @@ a.pswp__share--download:hover {
   margin: 0 auto;
   font-size: 24px;
   padding: 10px;
-  line-height: 20px;
+  /* line-height: 20px; */
   color: #CCC; }
 
 .pswp__caption--empty {

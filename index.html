@@ -332,6 +332,9 @@
             padding: 16px;
             color: #333;
         }
+        #interests ul ul ul {
+            display: none;
+        }
         @media (max-width: 1024px) {
             #interests > ul > li {
                 flex-flow: column nowrap;
@@ -501,7 +504,7 @@
                 </div>
                 <h3>Hack your images</h3>
                 <p>
-                    Code your designs into your images server-side. Never let your designs be limited by your platform.
+                    Nginx for your images. Never let a platform limit your designs.
                 </p>
             </li>
             <li id="xui">
@@ -584,77 +587,107 @@
                     </p>
                 </div>
                 <ul>
-                    <li>
+                    <li class="photo-gallery" itemscope itemtype="http://schema.org/ImageGallery">
                         <figure>
-                            <a href="javascript:viewSlideshow([
-                            {
-                                src: 'underconstruction.gif',
-                                w: 126,
-                                h: 105,
-                                title: 'Mmmm.  Bevels.  Where is my lens flare?'
-                            }])">
+                            <a href="interests/software">
                                 <img src="interests/software/thumbnail.jpg" srcset="interests/software/thumbnail@2x.jpg 2x" />
                             </a>
                             <figcaption>Software</figcaption>
                         </figure>
+                        <ul>
+                            <li itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                                <a href="interests/..." itemprop="url contentUrl" data-size="800x600">
+                                    ...
+                                </a>
+                                <p itemprop="caption description">
+                                    ...
+                                </p>
+                            </li>
+                            <li itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                                <a href="interests/..." itemprop="url contentUrl" data-size="800x600">
+                                    ...
+                                </a>
+                                <p itemprop="caption description">
+                                    ...
+                                </p>
+                            </li>
+                        </ul>
                     </li>
-                    <li>
+                    <li class="photo-gallery" itemscope itemtype="http://schema.org/ImageGallery">
                         <figure>
-                            <a href="javascript:viewSlideshow([
-                            {
-                                src: 'interests/hardware/1.jpg',
-                                w: 800,
-                                h: 600,
-                                title: 'From pixels to transistors, I cant help but take comfort in understanding the tech from top to bottom.  In college I led a team that built a physical chess board that could play you back…'
-                            },
-                            {
-                                src: 'interests/hardware/2.jpg',
-                                w: 800,
-                                h: 600,
-                                title: 'This was before the age of Raspberry Pis, so we programmed an FPGA board to control two servos that moved an electromagnet on an Etch-a-sketch type of actuator.  That was then plugged into a PC that ran a modified version of the WinBoard chess AI.'
-                            },
-                            {
-                                src: 'interests/hardware/3.jpg',
-                                w: 800,
-                                h: 630,
-                                title: 'Here’s some sped-up footage of the AI playing itself.'
-                            },
-                            {
-                                src: 'interests/hardware/4.jpg',
-                                w: 600,
-                                h: 800,
-                                title: 'Been in the cloud since 2008 and while I love it as much as the next person, nothing gets me as excited as owning my own metal.  The performance junkie in me loves squeezing out every last drop of speed.'
-                            },
-                            {
-                                src: 'interests/hardware/5.jpg',
-                                w: 600,
-                                h: 800,
-                                title: 'At ShopSavvy we used a hybrid cloud/colo setup between AWS and our data center in Dallas.   We saved a bundle on our big data clusters.'
-                            }])">
+                            <a href="interests/hardware">
                                 <img src="interests/hardware/thumbnail.jpg" srcset="interests/hardware/thumbnail@2x.jpg 2x" />
                             </a>
                             <figcaption>Hardware</figcaption>
                         </figure>
+                        <ul>
+                            <li itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                                <a href="interests/hardware/1.jpg" itemprop="url contentUrl" data-size="800x600">
+                                    Chess AI
+                                </a>
+                                <p itemprop="caption description">
+                                    From pixels to transistors, I cant help but take comfort in understanding the tech from top to bottom.  In college I led a team that built a physical chess board that could play you back…
+                                </p>
+                            </li>
+                            <li itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                                <a href="interests/hardware/2.jpg" itemprop="url contentUrl" data-size="800x600">
+                                    Chess AI
+                                </a>
+                                <p itemprop="caption description">
+                                    This was before the age of Raspberry Pis, so we programmed an FPGA board to control two servos that moved an electromagnet on an Etch-a-sketch type of actuator.  That was then plugged into a PC that ran a modified version of the WinBoard chess AI.
+                                </p>
+                            </li>
+                            <li itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                                <a href="interests/hardware/3.jpg" itemprop="url contentUrl" data-size="800x600">
+                                    Chess AI
+                                </a>
+                                <p itemprop="caption description">
+                                    Here’s some sped-up footage of the AI playing itself.
+                                </p>
+                            </li>
+                            <li itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                                <a href="interests/hardware/4.jpg" itemprop="url contentUrl" data-size="800x600">
+                                    Own Your Own Metal
+                                </a>
+                                <p itemprop="caption description">
+                                    Been in the cloud since 2008 and while I love it as much as the next person, nothing gets me as excited as owning my own metal.  The performance junkie in me loves squeezing out every last drop of speed.
+                                </p>
+                            </li>
+                            <li itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                                <a href="interests/hardware/5.jpg" itemprop="url contentUrl" data-size="800x600">
+                                    I &lt;3 Data Centers
+                                </a>
+                                <p itemprop="caption description">
+                                    At ShopSavvy we used a hybrid cloud/colo setup between AWS and our data center in Dallas.   We saved a bundle on our big data clusters.
+                                </p>
+                            </li>
+                        </ul>
                     </li>
-                    <li>
+                    <li class="photo-gallery" itemscope itemtype="http://schema.org/ImageGallery">
                         <figure>
-                            <a href="javascript:viewSlideshow([
-                            {
-                                src: 'interests/patents/1.jpg',
-                                w: 800,
-                                h: 600,
-                                title: 'Filed a patent for our work on QuickPay which lets you scan a barcode and then slide to pay.  It automates the checkout flow of any retailer with your stored wallet info.  Filed back in 2012 but still pending.  It does look like this one is going to go through though.  https://patents.google.com/patent/US20130297390A1'
-                            },
-                            {
-                                src: 'interests/patents/2.jpg',
-                                w: 800,
-                                h: 600,
-                                title: 'We built a pretty incredible price comparison search engine called ProductCloud (aka PriceNark).  We stopped pushing on this one though.  It’ll never go through.  https://patents.google.com/patent/US20130297464'
-                            }])">
+                            <a href="interests/patents">
                                 <img src="interests/patents/thumbnail.jpg" srcset="interests/patents/thumbnail@2x.jpg 2x" />
                             </a>
                             <figcaption>Patents</figcaption>
                         </figure>
+                        <ul>
+                            <li itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                                <a href="interests/patents/1.jpg" itemprop="url contentUrl" data-size="800x600">
+                                    QuickPay
+                                </a>
+                                <p itemprop="caption description">
+                                    Filed a patent for our work on QuickPay which lets you scan a barcode and then slide to pay.  It automates the checkout flow of any retailer with your stored wallet info.  Filed back in 2012 but still pending.  It does look like this one is going to go through though.  <a href="https://patents.google.com/patent/US20130297390A1">https://patents.google.com/patent/US20130297390A1</a>
+                                </p>
+                            </li>
+                            <li itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                                <a href="interests/patents/2.jpg" itemprop="url contentUrl" data-size="800x600">
+                                    PriceNark &amp; ProductCloud
+                                </a>
+                                <p itemprop="caption description">
+                                    We built a pretty incredible price comparison search engine called ProductCloud (aka PriceNark).  We stopped pushing on this one though.  It’ll never go through.  <a href="https://patents.google.com/patent/US20130297464">https://patents.google.com/patent/US20130297464</a>
+                                </p>
+                            </li>
+                        </ul>
                     </li>
                 </ul>
             </li>
@@ -666,47 +699,83 @@
                     </p>
                 </div>
                 <ul>
-                    <li>
+                    <li class="photo-gallery" itemscope itemtype="http://schema.org/ImageGallery">
                         <figure>
-                            <a href="javascript:viewSlideshow([
-                            {
-                                src: 'underconstruction.gif',
-                                w: 126,
-                                h: 105,
-                                title: 'Mmmm.  Bevels.  Where is my lens flare?'
-                            }])">
+                            <a href="interests/uiux">
                                 <img src="interests/uiux/thumbnail.jpg" srcset="interests/uiux/thumbnail@2x.jpg 2x" />
                             </a>
                             <figcaption>UI / UX</figcaption>
                         </figure>
+                        <ul>
+                            <li itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                                <a href="interests/..." itemprop="url contentUrl" data-size="800x600">
+                                    ...
+                                </a>
+                                <p itemprop="caption description">
+                                    ...
+                                </p>
+                            </li>
+                            <li itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                                <a href="interests/..." itemprop="url contentUrl" data-size="800x600">
+                                    ...
+                                </a>
+                                <p itemprop="caption description">
+                                    ...
+                                </p>
+                            </li>
+                        </ul>
                     </li>
-                    <li>
+                    <li class="photo-gallery" itemscope itemtype="http://schema.org/ImageGallery">
                         <figure>
-                            <a href="javascript:viewSlideshow([
-                            {
-                                src: 'underconstruction.gif',
-                                w: 126,
-                                h: 105,
-                                title: 'Mmmm.  Bevels.  Where is my lens flare?'
-                            }])">
+                            <a href="interests/animation">
                                 <img src="interests/animation/thumbnail.jpg" srcset="interests/animation/thumbnail@2x.jpg 2x" />
                             </a>
                             <figcaption>Animation</figcaption>
                         </figure>
+                        <ul>
+                            <li itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                                <a href="interests/..." itemprop="url contentUrl" data-size="800x600">
+                                    ...
+                                </a>
+                                <p itemprop="caption description">
+                                    ...
+                                </p>
+                            </li>
+                            <li itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                                <a href="interests/..." itemprop="url contentUrl" data-size="800x600">
+                                    ...
+                                </a>
+                                <p itemprop="caption description">
+                                    ...
+                                </p>
+                            </li>
+                        </ul>
                     </li>
-                    <li>
+                    <li class="photo-gallery" itemscope itemtype="http://schema.org/ImageGallery">
                         <figure>
-                            <a href="javascript:viewSlideshow([
-                            {
-                                src: 'underconstruction.gif',
-                                w: 126,
-                                h: 105,
-                                title: 'Mmmm.  Bevels.  Where is my lens flare?'
-                            }])">
+                            <a href="interests/illustration">
                                 <img src="interests/illustration/thumbnail.jpg" srcset="interests/illustration/thumbnail@2x.jpg 2x" />
                             </a>
                             <figcaption>Illustration</figcaption>
                         </figure>
+                        <ul>
+                            <li itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                                <a href="interests/..." itemprop="url contentUrl" data-size="800x600">
+                                    ...
+                                </a>
+                                <p itemprop="caption description">
+                                    ...
+                                </p>
+                            </li>
+                            <li itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                                <a href="interests/..." itemprop="url contentUrl" data-size="800x600">
+                                    ...
+                                </a>
+                                <p itemprop="caption description">
+                                    ...
+                                </p>
+                            </li>
+                        </ul>
                     </li>
                 </ul>
             </li>
@@ -718,73 +787,141 @@
                     </p>
                 </div>
                 <ul>
-                    <li>
+                    <li class="photo-gallery" itemscope itemtype="http://schema.org/ImageGallery">
                         <figure>
-                            <a href="javascript:viewSlideshow([
-                            {
-                                src: 'underconstruction.gif',
-                                w: 126,
-                                h: 105,
-                                title: 'Mmmm.  Bevels.  Where is my lens flare?'
-                            }])">
+                            <a href="interests/shopsavvy">
                                 <img src="interests/shopsavvy/thumbnail.jpg" srcset="interests/shopsavvy/thumbnail@2x.jpg 2x" />
                             </a>
                             <figcaption>ShopSavvy</figcaption>
                         </figure>
+                        <ul>
+                            <li itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                                <a href="interests/..." itemprop="url contentUrl" data-size="800x600">
+                                    ...
+                                </a>
+                                <p itemprop="caption description">
+                                    ...
+                                </p>
+                            </li>
+                            <li itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                                <a href="interests/..." itemprop="url contentUrl" data-size="800x600">
+                                    ...
+                                </a>
+                                <p itemprop="caption description">
+                                    ...
+                                </p>
+                            </li>
+                        </ul>
                     </li>
-                    <li>
+                    <li class="photo-gallery" itemscope itemtype="http://schema.org/ImageGallery">
                         <figure>
-                            <a href="javascript:viewSlideshow([
-                            {
-                                src: 'underconstruction.gif',
-                                w: 126,
-                                h: 105,
-                                title: 'Mmmm.  Bevels.  Where is my lens flare?'
-                            }])">
+                            <a href="interests/product">
                                 <img src="interests/product/thumbnail.jpg" srcset="interests/product/thumbnail@2x.jpg 2x" />
                             </a>
                             <figcaption>Product</figcaption>
                         </figure>
+                        <ul>
+                            <li itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                                <a href="interests/..." itemprop="url contentUrl" data-size="800x600">
+                                    ...
+                                </a>
+                                <p itemprop="caption description">
+                                    ...
+                                </p>
+                            </li>
+                            <li itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                                <a href="interests/..." itemprop="url contentUrl" data-size="800x600">
+                                    ...
+                                </a>
+                                <p itemprop="caption description">
+                                    ...
+                                </p>
+                            </li>
+                        </ul>
                     </li>
-                    <li>
+                    <li class="photo-gallery" itemscope itemtype="http://schema.org/ImageGallery">
                         <figure>
-                            <a href="javascript:viewSlideshow([
-                            {
-                                src: 'interests/speaking/sxsw.jpg',
-                                w: 800,
-                                h: 600,
-                                title: 'Speaking at SXSW back in 2010. Back then there were 7 major smartphone platforms, most folks in the room still had flip phones and Blackberry still sold more smartphones than anybody else. I described the differences between each platform using comic book characters.  It was only a little bit funny.'
-                            },
-                            {
-                                src: 'interests/speaking/paypalx.jpg',
-                                w: 800,
-                                h: 600,
-                                title: 'baslkj asldfkj sdflksdflkj sflksdlkjdsglks flkj slks fl'
-                            },
-                            {
-                                src: 'interests/speaking/irce.jpg',
-                                w: 800,
-                                h: 600,
-                                title: 'baslkj asldfkj sdflksdflkj sflksdlkjdsglks flkj slks fl'
-                            }])">
+                            <a href="interests/speaking">
                                 <img src="interests/speaking/thumbnail.jpg" srcset="interests/speaking/thumbnail@2x.jpg 2x" />
                             </a>
                             <figcaption>Speaking</figcaption>
                         </figure>
+                        <ul>
+                            <li itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                                <a href="interests/speaking/sxsw.jpg" itemprop="url contentUrl" data-size="800x600">
+                                    Speaking at SXSW
+                                </a>
+                                <p itemprop="caption description">
+                                    Speaking at SXSW back in 2010. Back then there were 7 major smartphone platforms, most folks in the room still had flip phones and Blackberry still sold more smartphones than anybody else. I described the differences between each platform using comic book characters. It ended up being only a little funny.
+                                </p>
+                            </li>
+                            <li itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                                <a href="interests/speaking/interviewing.jpg" itemprop="url contentUrl" data-size="800x600">
+                                    Interviewing at SXSW
+                                </a>
+                                <p itemprop="caption description">
+                                    I give the worst interviews too.  This was also at SXSW.
+                                </p>
+                            </li>
+                            <li itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                                <a href="interests/speaking/paypalx.jpg" itemprop="url contentUrl" data-size="800x600">
+                                    Demo at PayPal X
+                                </a>
+                                <p itemprop="caption description">
+                                    Rehearsing backstage at PayPal X Innovate 2009 the day before the conference.  A fever took me out the next day though and I missed the actual event unfortunately.
+                                </p>
+                            </li>
+                            <li itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                                <a href="interests/speaking/irce.jpg" itemprop="url contentUrl" data-size="800x600">
+                                    Speaking at IRCE
+                                </a>
+                                <p itemprop="caption description">
+                                    I spoke at IRCE in 2014 about some of the tech used by ShopSavvy.
+                                </p>
+                            </li>
+                            <li itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                                <a href="interests/speaking/somopay.jpg" itemprop="url contentUrl" data-size="906x600">
+                                    Social Mobile Payments
+                                </a>
+                                <p itemprop="caption description">
+                                    I did a doom and gloom presentation for the Social Mobile Payments conference titled Dumb Pipes, Dumb Shelves, Smart Wallet.  I don’t think anybody enjoyed hearing about the convoluted future of payments on mobile.  I’ll stick to positive content from now on.
+                                </p>
+                            </li>
+                            <li itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                                <a href="interests/speaking/local.jpg" itemprop="url contentUrl" data-size="1334x493">
+                                    Local
+                                </a>
+                                <p itemprop="caption description">
+                                    Local Dallas startup event.
+                                </p>
+                            </li>
+                        </ul>
                     </li>
-                    <li>
+                    <li class="photo-gallery" itemscope itemtype="http://schema.org/ImageGallery">
                         <figure>
-                            <a href="javascript:viewSlideshow([
-                            {
-                                src: 'underconstruction.gif',
-                                w: 126,
-                                h: 105,
-                                title: 'Mmmm.  Bevels.  Where is my lens flare?'
-                            }])">
+                            <a href="interests/awards">
                                 <img src="interests/awards/thumbnail.jpg" srcset="interests/awards/thumbnail@2x.jpg 2x" />
                             </a>
                             <figcaption>Awards</figcaption>
                         </figure>
+                        <ul>
+                            <li itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                                <a href="interests/..." itemprop="url contentUrl" data-size="800x600">
+                                    ...
+                                </a>
+                                <p itemprop="caption description">
+                                    ...
+                                </p>
+                            </li>
+                            <li itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                                <a href="interests/..." itemprop="url contentUrl" data-size="800x600">
+                                    ...
+                                </a>
+                                <p itemprop="caption description">
+                                    ...
+                                </p>
+                            </li>
+                        </ul>
                     </li>
                 </ul>
             </li>
@@ -796,33 +933,57 @@
                     </p>
                 </div>
                 <ul>
-                    <li>
+                    <li class="photo-gallery" itemscope itemtype="http://schema.org/ImageGallery">
                         <figure>
-                            <a href="javascript:viewSlideshow([
-                            {
-                                src: 'underconstruction.gif',
-                                w: 126,
-                                h: 105,
-                                title: 'Mmmm.  Bevels.  Where is my lens flare?'
-                            }])">
+                            <a href="interests/meatloaf">
                                 <img src="interests/meatloaf/thumbnail.jpg" srcset="interests/meatloaf/thumbnail@2x.jpg 2x" />
                             </a>
                             <figcaption>Meatloaf</figcaption>
                         </figure>
+                        <ul>
+                            <li itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                                <a href="interests/..." itemprop="url contentUrl" data-size="800x600">
+                                    ...
+                                </a>
+                                <p itemprop="caption description">
+                                    ...
+                                </p>
+                            </li>
+                            <li itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                                <a href="interests/..." itemprop="url contentUrl" data-size="800x600">
+                                    ...
+                                </a>
+                                <p itemprop="caption description">
+                                    ...
+                                </p>
+                            </li>
+                        </ul>
                     </li>
-                    <li>
+                    <li class="photo-gallery" itemscope itemtype="http://schema.org/ImageGallery">
                         <figure>
-                            <a href="javascript:viewSlideshow([
-                            {
-                                src: 'underconstruction.gif',
-                                w: 126,
-                                h: 105,
-                                title: 'Mmmm.  Bevels.  Where is my lens flare?'
-                            }])">
+                            <a href="interests/ximage">
                                 <img src="interests/ximage/thumbnail.jpg" srcset="interests/ximage/thumbnail@2x.jpg 2x" />
                             </a>
                             <figcaption>XImage</figcaption>
                         </figure>
+                        <ul>
+                            <li itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                                <a href="interests/..." itemprop="url contentUrl" data-size="800x600">
+                                    ...
+                                </a>
+                                <p itemprop="caption description">
+                                    ...
+                                </p>
+                            </li>
+                            <li itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                                <a href="interests/..." itemprop="url contentUrl" data-size="800x600">
+                                    ...
+                                </a>
+                                <p itemprop="caption description">
+                                    ...
+                                </p>
+                            </li>
+                        </ul>
                     </li>
                 </ul>
             </li>
@@ -834,33 +995,57 @@
                     </p>
                 </div>
                 <ul>
-                    <li>
+                    <li class="photo-gallery" itemscope itemtype="http://schema.org/ImageGallery">
                         <figure>
-                            <a href="javascript:viewSlideshow([
-                            {
-                                src: 'underconstruction.gif',
-                                w: 126,
-                                h: 105,
-                                title: 'Mmmm.  Bevels.  Where is my lens flare?'
-                            }])">
+                            <a href="interests/texas">
                                 <img src="interests/texas/thumbnail.jpg" srcset="interests/texas/thumbnail@2x.jpg 2x" />
                             </a>
                             <figcaption>Texas</figcaption>
                         </figure>
+                        <ul>
+                            <li itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                                <a href="interests/..." itemprop="url contentUrl" data-size="800x600">
+                                    ...
+                                </a>
+                                <p itemprop="caption description">
+                                    ...
+                                </p>
+                            </li>
+                            <li itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                                <a href="interests/..." itemprop="url contentUrl" data-size="800x600">
+                                    ...
+                                </a>
+                                <p itemprop="caption description">
+                                    ...
+                                </p>
+                            </li>
+                        </ul>
                     </li>
-                    <li>
+                    <li class="photo-gallery" itemscope itemtype="http://schema.org/ImageGallery">
                         <figure>
-                            <a href="javascript:viewSlideshow([
-                            {
-                                src: 'underconstruction.gif',
-                                w: 126,
-                                h: 105,
-                                title: 'Mmmm.  Bevels.  Where is my lens flare?'
-                            }])">
+                            <a href="interests/sanfrancisco">
                                 <img src="interests/sanfrancisco/thumbnail.jpg" srcset="interests/sanfrancisco/thumbnail@2x.jpg 2x" />
                             </a>
                             <figcaption>San Francisco</figcaption>
                         </figure>
+                        <ul>
+                            <li itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                                <a href="interests/..." itemprop="url contentUrl" data-size="800x600">
+                                    ...
+                                </a>
+                                <p itemprop="caption description">
+                                    ...
+                                </p>
+                            </li>
+                            <li itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                                <a href="interests/..." itemprop="url contentUrl" data-size="800x600">
+                                    ...
+                                </a>
+                                <p itemprop="caption description">
+                                    ...
+                                </p>
+                            </li>
+                        </ul>
                     </li>
                 </ul>
             </li>
@@ -1011,35 +1196,210 @@
         </div>
 
         <script>
-            function viewSlideshow(items) {
-                var pswpElement = document.querySelectorAll('.pswp')[0];
-    
-                // build items array
-                // var items = [
-                //     {
-                //         src: 'https://placekitten.com/600/400',
-                //         w: 600,
-                //         h: 400
-                //     },
-                //     {
-                //         src: 'https://placekitten.com/1200/900',
-                //         w: 1200,
-                //         h: 900
-                //     }
-                // ];
-    
-                // define options (if needed)
-                var options = {
-                    // optionName: 'option value'
-                    // for example:
-                    index: 0, // start at first slide
-                    loop: false
+            var initPhotoSwipeFromDOM = function(gallerySelector) {
+
+                // parse slide data (url, title, size ...) from DOM elements 
+                // (children of gallerySelector)
+                var parseThumbnailElements = function(el) {
+                    var thumbElements = el.childNodes[3].childNodes,
+                        numNodes = thumbElements.length,
+                        items = [],
+                        figureEl,
+                        linkEl,
+                        size,
+                        item;
+
+                    for(var i = 0; i < numNodes; i++) {
+
+                        figureEl = thumbElements[i]; // <figure> element
+
+                        // include only element nodes 
+                        if(figureEl.nodeType !== 1) {
+                            continue;
+                        }
+
+                        linkEl = figureEl.children[0]; // <a> element
+
+                        size = linkEl.getAttribute('data-size').split('x');
+
+                        // create slide object
+                        item = {
+                            src: linkEl.getAttribute('href'),
+                            w: parseInt(size[0], 10),
+                            h: parseInt(size[1], 10)
+                        };
+
+
+
+                        if(figureEl.children.length > 1) {
+                            // <figcaption> content
+                            item.title = figureEl.children[1].innerHTML; 
+                        }
+
+                        item.el = figureEl.parentNode.previousSibling; // save link to element for getThumbBoundsFn
+                        items.push(item);
+                    }
+
+                    return items;
                 };
-    
-                // Initializes and opens PhotoSwipe
-                var gallery = new PhotoSwipe( pswpElement, PhotoSwipeUI_Default, items, options);
-                gallery.init();
-            }
+
+                // find nearest parent element
+                var closest = function closest(el, fn) {
+                    return el && ( fn(el) ? el : closest(el.parentNode, fn) );
+                };
+
+                // triggers when user clicks on thumbnail
+                var onThumbnailsClick = function(e) {
+                    e = e || window.event;
+                    e.preventDefault ? e.preventDefault() : e.returnValue = false;
+
+                    var eTarget = e.target || e.srcElement;
+
+                    // find root element of slide
+                    var clickedListItem = closest(eTarget, function(el) {
+                        return (el.tagName && el.tagName.toUpperCase() === 'FIGURE');
+                    });
+
+                    if(!clickedListItem) {
+                        return;
+                    }
+
+                    // find index of clicked item by looping through all child nodes
+                    // alternatively, you may define index via data- attribute
+                    var clickedGallery = clickedListItem.parentNode,
+                        childNodes = clickedListItem.parentNode.childNodes,
+                        numChildNodes = childNodes.length,
+                        nodeIndex = 0,
+                        index;
+
+                    for (var i = 0; i < numChildNodes; i++) {
+                        if(childNodes[i].nodeType !== 1) { 
+                            continue; 
+                        }
+
+                        if(childNodes[i] === clickedListItem) {
+                            index = nodeIndex;
+                            break;
+                        }
+                        nodeIndex++;
+                    }
+
+
+
+                    if(index >= 0) {
+                        // open PhotoSwipe if valid index found
+                        openPhotoSwipe( index, clickedGallery );
+                    }
+                    return false;
+                };
+
+                // parse picture index and gallery index from URL (#&pid=1&gid=2)
+                var photoswipeParseHash = function() {
+                    var hash = window.location.hash.substring(1),
+                    params = {};
+
+                    if(hash.length < 5) {
+                        return params;
+                    }
+
+                    var vars = hash.split('&');
+                    for (var i = 0; i < vars.length; i++) {
+                        if(!vars[i]) {
+                            continue;
+                        }
+                        var pair = vars[i].split('=');  
+                        if(pair.length < 2) {
+                            continue;
+                        }           
+                        params[pair[0]] = pair[1];
+                    }
+
+                    if(params.gid) {
+                        params.gid = parseInt(params.gid, 10);
+                    }
+
+                    return params;
+                };
+
+                var openPhotoSwipe = function(index, galleryElement, disableAnimation, fromURL) {
+                    var pswpElement = document.querySelectorAll('.pswp')[0],
+                        gallery,
+                        options,
+                        items;
+
+                    items = parseThumbnailElements(galleryElement);
+
+                    // define options (if needed)
+                    options = {
+                        showHideOpacity: true,
+                        hideAnimationDuration:0, 
+                        showAnimationDuration:0,
+                        loop: false,
+                        // define gallery index (for URL)
+                        galleryUID: galleryElement.getAttribute('data-pswp-uid'),
+
+                        getThumbBoundsFn: function(index) {
+                            // See Options -> getThumbBoundsFn section of documentation for more info
+                            var thumbnail = items[index].el.parentNode.getElementsByTagName('img')[0], // find thumbnail
+                                pageYScroll = window.pageYOffset || document.documentElement.scrollTop,
+                                rect = thumbnail.getBoundingClientRect(); 
+
+                            return {x:rect.left, y:rect.top + pageYScroll, w:rect.width};
+                        }
+
+                    };
+
+                    // PhotoSwipe opened from URL
+                    if(fromURL) {
+                        if(options.galleryPIDs) {
+                            // parse real index when custom PIDs are used 
+                            // http://photoswipe.com/documentation/faq.html#custom-pid-in-url
+                            for(var j = 0; j < items.length; j++) {
+                                if(items[j].pid == index) {
+                                    options.index = j;
+                                    break;
+                                }
+                            }
+                        } else {
+                            // in URL indexes start from 1
+                            options.index = parseInt(index, 10) - 1;
+                        }
+                    } else {
+                        options.index = parseInt(index, 10);
+                    }
+
+                    // exit if index not found
+                    if( isNaN(options.index) ) {
+                        return;
+                    }
+
+                    if(disableAnimation) {
+                        options.showAnimationDuration = 0;
+                    }
+
+                    // Pass data to PhotoSwipe and initialize it
+                    gallery = new PhotoSwipe( pswpElement, PhotoSwipeUI_Default, items, options);
+                    gallery.init();
+                };
+
+                // loop through all gallery elements and bind events
+                var galleryElements = document.querySelectorAll( gallerySelector );
+
+                for(var i = 0, l = galleryElements.length; i < l; i++) {
+                    galleryElements[i].setAttribute('data-pswp-uid', i+1);
+                    galleryElements[i].onclick = onThumbnailsClick;
+                    galleryElements[i].oncontextmenu = onThumbnailsClick;
+                }
+
+                // Parse URL and open gallery if it contains #&pid=3&gid=1
+                var hashData = photoswipeParseHash();
+                if(hashData.pid && hashData.gid) {
+                    openPhotoSwipe( hashData.pid ,  galleryElements[ hashData.gid - 1 ], true, true );
+                }
+            };
+
+            // execute above function
+            initPhotoSwipeFromDOM('.photo-gallery');
         </script>
         
 </body>
