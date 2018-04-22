@@ -149,17 +149,6 @@ section h1::after, section h1::before {
 }
 
 
-#branch9 h2 {
-    background: no-repeat left top/cover url('startups/branch9.png');
-    /* background-image: url('startups/branch9.png');
-    background-image: -webkit-image-set( url(startups/branch9.png) 1x, url(startups/branch9@2x.png) 2x); */
-    height: 256px;
-}
-#branch9 h3 {
-    color: #1E1E1E;
-}
-
-
 #villagetable h2 {
     background: no-repeat center/60% url(startups/villagetable.svg), no-repeat center/cover url('startups/villagetablebg.jpg');
     /* background-image: url(startups/villagetable.svg), url('startups/villagetablebg.jpg');
