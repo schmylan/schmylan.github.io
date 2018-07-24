@@ -14,7 +14,7 @@ body {
     background-color: #eee;
     margin: auto;
 }
-h3 {
+h4 {
     font-size: 18px;
     text-transform: uppercase;
     /* font-weight: bold; */
@@ -50,7 +50,7 @@ footer {
 }
 
 
-section h1 {
+section h2 {
     margin: 48px 0px;
     display: flex;
     flex-basis: 100%;
@@ -68,7 +68,7 @@ section h1 {
     background-color: #eeeeeebb;
     -webkit-backdrop-filter: blur(32px);
 }
-section h1::after, section h1::before {
+section h2::after, section h2::before {
     content: "";
     flex-grow: 1;
     background: #ddd;
@@ -95,7 +95,7 @@ section h1::after, section h1::before {
     width: 100%;
     margin-top: 32px;
 }
-#startups h2 {
+#startups h3 {
     text-indent: 100%;
     white-space: nowrap;
     overflow: hidden;
@@ -106,7 +106,7 @@ section h1::after, section h1::before {
     transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
     border-radius: 8px;
 }
-#startups h2:hover {
+#startups h3:hover {
     box-shadow: 0 14px 28px rgba(0, 0, 0, 0.16), 0 10px 10px rgba(0, 0, 0, 0.22);
     position: relative;
     top: -2px;
@@ -114,7 +114,7 @@ section h1::after, section h1::before {
 #startups p {
     margin: 0px 32px 32px 32px;
 }
-#startups h3 {
+#startups h4 {
     margin: 0px 32px;
 }
 #startups div {
@@ -130,13 +130,13 @@ section h1::after, section h1::before {
     font-size: 16px;
 }
 
-#shopsavvy h2 {
+#shopsavvy h3 {
     background: no-repeat center/66% url(startups/shopsavvy.svg), no-repeat center/cover url('startups/shopsavvybg.jpg');
     /* background-image: url(startups/shopsavvy.svg), url('startups/shopsavvybg.jpg'); */
     /* background-image: url(startups/shopsavvy.svg), -webkit-image-set( url(startups/shopsavvybg.jpg) 1x, url(startups/shopsavvybg@2x.jpg) 2x); */
     height: 384px;
 }
-#shopsavvy h3 {
+#shopsavvy h4 {
     color: #44C200;
 }
 #shopsavvy div a {
@@ -149,53 +149,53 @@ section h1::after, section h1::before {
 }
 
 
-#villagetable h2 {
+#villagetable h3 {
     background: no-repeat center/60% url(startups/villagetable.svg), no-repeat center/cover url('startups/villagetablebg.jpg');
     /* background-image: url(startups/villagetable.svg), url('startups/villagetablebg.jpg');
     background-image: url(startups/villagetable.svg), -webkit-image-set( url(startups/villagetablebg.jpg) 1x, url(startups/villagetablebg@2x.jpg) 2x); */
     height: 320px;
 }
-#villagetable h3 {
+#villagetable h4 {
     color: #F67D15;
 }
 
 
-#xui h2 {
+#xui h3 {
     background: no-repeat center/33% url(startups/xui.svg), no-repeat center/cover url('startups/xuibg.jpg');
     /* background-image: url(startups/xui.svg), url('startups/xuibg.jpg');
     background-image: url(startups/xui.svg), -webkit-image-set( url(startups/xuibg.jpg) 1x, url(startups/xuibg@2x.jpg) 2x); */
     height: 320px;
 }
-#xui h3 {
+#xui h4 {
     color: #3080B6;
 }
 
 
-#veryable h2 {
+#veryable h3 {
     background: no-repeat center/50% url(startups/veryable.svg), no-repeat center/cover url('startups/veryablebg.jpg');
     /* background-image: url(startups/veryable.svg), url('startups/veryablebg.jpg');
     background-image: url(startups/veryable.svg), -webkit-image-set( url(startups/veryablebg.jpg) 1x, url(startups/veryablebg@2x.jpg) 2x); */
     height: 256px;
 }
-#veryable h3 {
+#veryable h4 {
     color: #93817E;
 }
 
 
-#openimage h2 {
+#openimage h3 {
     background: #EC3852 url('startups/openimage.svg') no-repeat 75% 75%;
     height: 320px;
 }
-#openimage h3 {
+#openimage h4 {
     color: #EC3852;
 }
 
 
-#spectrum h2 {
+#spectrum h3 {
     height: 256px;
     background-image: url(startups/spectrum.svg), radial-gradient(farthest-corner at 50% 100%, rgba(123, 22, 255, 0.75), #0F015E), linear-gradient(#0F015E, #0F015E);
 }
-#spectrum h3 {
+#spectrum h4 {
     color: #3C0AA1;
 }
 
@@ -209,7 +209,7 @@ section h1::after, section h1::before {
         margin-right: 8px;
         text-align: left;
     }
-    #startups h2 {
+    #startups h3 {
         height: 256px;
     }
 }
@@ -235,6 +235,8 @@ section h1::after, section h1::before {
 #start_ups      h3 { color: #865C50; }
 #interests h3 {
     margin: 0px 32px;
+    font-size: 18px;
+    text-transform: uppercase;
 }
 #interests p {
     margin: 0px 32px;
