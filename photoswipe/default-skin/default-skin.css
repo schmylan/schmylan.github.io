@@ -267,14 +267,15 @@ a.pswp__share--download:hover {
   width: 100%;
   min-height: 44px; }
   .pswp__caption small {
-    font-size: 24px;
+    font-size: 18px;
     color: #BBB; }
 
 .pswp__caption__center {
   text-align: left;
-  max-width: 420px;
+  max-width: 800px;
   margin: 0 auto;
-  font-size: 24px;
+  font-size: 18px;
+  line-height: 24px;
   padding: 10px;
   /* line-height: 20px; */
   color: #CCC; }
