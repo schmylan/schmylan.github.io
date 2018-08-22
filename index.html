@@ -370,6 +370,14 @@
                             <figcaption>Animation</figcaption>
                         </figure>
                         <ul>
+                            <li itemprop="associatedMedia" itemscope itemtype="http://schema.org/VideoObject">
+                                <a href="interests/animation/pulse2.mp4" data-poster="interests/animation/pulse2.png" itemprop="url contentUrl" data-size="926x1646">
+                                    Global Search &amp; Store Search
+                                </a>
+                                <p itemprop="caption description">
+                                    When it comes to good mobile design, I've always felt that animations were equally as important as the layout itself.  So I started incorporating animations into my specs as I designed.  Here I explored some contextual search where you could easily switch between searching at a global level or a store level (see how the types of boots change drastically).  Without the these animations the UX would feel very disconnected switching between the two contexts.
+                                </p>
+                            </li>
                             <li itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
                                 <a href="interests/animation/easing-curves.png" itemprop="url contentUrl" data-size="1516x1530">
                                     WinForms Animation Extensions
@@ -1091,13 +1099,21 @@
                         linkEl = figureEl.children[0]; // <a> element
 
                         size = linkEl.getAttribute('data-size').split('x');
-
-                        // create slide object
-                        item = {
-                            src: linkEl.getAttribute('href'),
-                            w: parseInt(size[0], 10),
-                            h: parseInt(size[1], 10)
-                        };
+                        src = linkEl.getAttribute('href');
+                        
+                        if (src.endsWith(".mp4") || src.endsWith(".mov")) {
+                            poster = linkEl.getAttribute('data-poster');
+                            item = {
+                                html: '<div class="pswp_video"><video poster="' + poster + '" controls preload="none"><source src="' + src + '" type="video/mp4" /><p>Your browser doesn\'t seem to support the video tag.</p></video></div>'
+                            };
+                        } else {
+                            // create slide object
+                            item = {
+                                src: src,
+                                w: parseInt(size[0], 10),
+                                h: parseInt(size[1], 10)
+                            };
+                        }
 
 
 

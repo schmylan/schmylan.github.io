@@ -481,3 +481,12 @@ a.pswp__share--download:hover {
 
 .pswp--minimal--dark .pswp__top-bar {
   background: none; }
+
+.pswp_video {
+  height: 80%;
+  text-align: center;
+}
+.pswp_video video {
+  height: 100%;
+  width: auto;
+}
