@@ -241,19 +241,59 @@
                         </figure>
                         <ul>
                             <li itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-                                <a href="interests/..." itemprop="url contentUrl" data-size="800x600">
-                                    ...
+                                <a href="interests/software/shopsavvy.jpg" itemprop="url contentUrl" data-size="262x331">
+                                    ShopSavvy
                                 </a>
                                 <p itemprop="caption description">
-                                    ...
+                                    I can't express how much I love the mobile space.  Before smartphones I tinkered with flip phones even.  When Apple announced the iPhone, I knew I was all in.  I started with the Android Beta SDK back in 2008 since Apple took their dear sweet time to release their's and I launched ShopSavvy that same year.  I'll admit, I wasn't a fan of Activities or Intents so I ended up building a custom UI framework (much like an Android version of a SPA) so that I could have my delicious animations just like the iPhone.  (Now all that loveliness come standard on Android, of course.)  It was a big bet (considering my time constraints) but fortunately it helped me win first prize in Google's <a href="https://en.wikipedia.org/wiki/Android_Developer_Challenge" target="_blank">Android Developer Challenge</a> (back then it was called GoCart).  Ten years and 42 million downloads later, ShopSavvy is still ticking.
                                 </p>
                             </li>
                             <li itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-                                <a href="interests/..." itemprop="url contentUrl" data-size="800x600">
-                                    ...
+                                <a href="interests/patents/product-cloud-pricenark-patent.jpg" itemprop="url contentUrl" data-size="792x1024">
+                                    PriceNark
                                 </a>
                                 <p itemprop="caption description">
-                                    ...
+                                    PriceNark was a realtime price comparison search engine.  It differed from a traditional web crawler in that, instead of store-and-index, it would scrape information from other websites at the time of the user request (i.e. when they scanned a barcode).  Since semantic analysis wasn't specific enough and since product pages were often accessed via retailers' search feature, I had to create individual adapters for every single retailer.  There were usually dozens of adapters running in parallel and to prevent the user from having to wait until the last horse crossed the finish line before they could see any results, I architected PriceNark to use a lesser-known feature of the HTTP protocol called <a href="https://en.wikipedia.org/wiki/Chunked_transfer_encoding" target="_blank">chunked HTTP responses</a> which let us use our traditional API as if it were a streaming protocol.  This enabled users to watch the prices trickle into their UI over a period of 5 seconds instead of staring at a loading spinner for what felt like forever.  It was a delightful experience that really set us apart from the other competitors while simultaneously providing, by far, the most accurate pricing information (which often changed on an hourly basis).
+                                </p>
+                            </li>
+                            <li itemprop="associatedMedia" itemscope itemtype="http://schema.org/VideoObject">
+                                <a href="interests/uiux/shopsavvy-quickpay.mp4" data-poster="interests/uiux/shopsavvy-quickpay.jpg" itemprop="url contentUrl" data-size="320x478">
+                                    QuickPay
+                                </a>
+                                <p itemprop="caption description">
+                                    This project was an incredibly ambitious addition to ShopSavvy.  The strategy was to leverage one of our team's biggest strengths (real-time screen-scraping) to mitigate one of our biggest disadvantages (users' reluctance to buy from their phones). Our solution was to store their credit card details and automate the checkout process on their behalf all behind the scenes saving them an average of 150 keystrokes. Its first Christmas season saw a 315% year over year growth. And 7 years later we were granted a patent for this work.
+                                </p>
+                            </li>
+                            <li itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                                <a href="interests/ximage/ximage-browser.png" itemprop="url contentUrl" data-size="1024x1024">
+                                    XImage
+                                </a>
+                                <p itemprop="caption description">
+                                    I kicked off a side project back in 2014, called XImage, that merged graphics processing with a web server. It let developers request just-in-time image transformations from the query string. It functioned as middleware that intercepted any image being served out of your web server and applied the effects before sending it down the wire.  XImage has since served out billions of images.
+                                </p>
+                            </li>
+                            <li itemprop="associatedMedia" itemscope itemtype="http://schema.org/VideoObject">
+                                <a href="interests/meatloaf/meatloaf.mp4" data-poster="interests/meatloaf/meatloaf.jpg" itemprop="url contentUrl" data-size="860x720">
+                                    Meatloaf Debugger
+                                </a>
+                                <p itemprop="caption description">
+                                    Meatloaf was my most technically challenging problem to solve.  Unlike Android, the first couple of iPhones had cameras with a <a href="https://en.wikipedia.org/wiki/Fixed-focus_lens" target="_blank">fixed focus lens</a>.  Because of this scanning a barcode was always blurry.  But running <a href="https://en.wikipedia.org/wiki/Blind_deconvolution" target="_blank">blind deconvolutions</a> to clear up the image was too computationally intensive to do at multiple frames per second. So instead I wrote Meatloaf which tries to solve the problem backwards. It worked by taking known barcode patterns, pre-blur them ahead of time, and compare them piecewise, segment by segment, to the target image for similarity.  We eventually licensed the tech to Macys, Sam's Club, CNET, Consumer Reports and PriceGrabber.
+                                </p>
+                            </li>
+                            <li itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                                <a href="interests/software/pick-a-seat.jpg" itemprop="url contentUrl" data-size="1024x642">
+                                    Pick-a-Seat
+                                </a>
+                                <p itemprop="caption description">
+                                    Most of my earliest projects were frontend projects.  But generally, I really enjoy taking a new piece of tech (like an obscure browser feature) and using it to blaze a new trail and drive a truly unique or novel experience.  Here's an early project a lifetime ago from 2007.  For context, back then, IE7 claimed over 90% of our users, and Chrome didn't exist yet.  Since SVG wasn't yet supported and Flash wasn't allowed, I leveraged VML and vanilla javascript to build something uniquely immersive for the time.  For extra wow factor, it even applied isometric effects to our preexisting CMS of seating maps using affine transformations (i.e. fake 3D).
+                                </p>
+                            </li>
+                            <li itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                                <a href="interests/animation/easing-curves.png" itemprop="url contentUrl" data-size="1516x1530">
+                                    Kiosk
+                                </a>
+                                <p itemprop="caption description">
+                                    Back in 2006, I was hired by an event ticketing startup to build a touch-screen, kiosk application. This was before the days of iOS, Android or even HTML5 for that matter, so their whole suite of products were built on top of WinForms. Back then, WinForms didn't lend itself well to full screen UX or even touch controls so I ended up building out major extensions to WinForms to support animations complete with control-level transitions and customizable easing curves. It was designed to fit the default WinForms programming model so developers that came after me would keep getting my nifty transitions by default without needing to learn anything new or do anything differently.  I was extra proud of my work when Apple's UIKit came out a year later and validated/standardized many of my "then-crazy" concepts.  Of course their's was leagues better, but it felt good knowing my intuitions about UI, animations and general HIG were in the right ballpark.
                                 </p>
                             </li>
                         </ul>
@@ -301,19 +341,19 @@
                         </figure>
                         <ul>
                             <li itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-                                <a href="interests/patents/1.jpg" itemprop="url contentUrl" data-size="800x600">
-                                    QuickPay
+                                <a href="interests/patents/shopsavvy-wallet-quickpay-patent.jpg" itemprop="url contentUrl" data-size="1024x768">
+                                    ShopSavvy Wallet (QuickPay)
                                 </a>
                                 <p itemprop="caption description">
                                     Patent granted!  At ShopSavvy we built QuickPay, a system that let you use your pre-stored credit card and address to skip a retailer's checkout flow with just a swipe.  It would save around 150 keystrokes on your phone which was particularly helpful if you were scanning barcodes in the aisle of the store. <a href="https://patents.google.com/patent/US9953314B2/en" target="_blank">https://patents.google.com/patent/US9953314B2/en</a>
                                 </p>
                             </li>
                             <li itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-                                <a href="interests/patents/2.jpg" itemprop="url contentUrl" data-size="800x600">
+                                <a href="interests/patents/product-cloud-pricenark-patent.jpg" itemprop="url contentUrl" data-size="792x1024">
                                     PriceNark &amp; ProductCloud
                                 </a>
                                 <p itemprop="caption description">
-                                    We also applied for another patent for our incredible price comparison search engine called ProductCloud (aka PriceNark).  We stopped pushing on this one though.  It’ll never go through.  <a href="https://patents.google.com/patent/US20130297464" target="_blank">https://patents.google.com/patent/US20130297464</a>
+                                    Honorable mention: We also applied for another patent for our price comparison search engine called ProductCloud (formerly called PriceNark).  We stopped pushing on this one though.  Evidently it’ll never go through.  <a href="https://patents.google.com/patent/US20130297464" target="_blank">https://patents.google.com/patent/US20130297464</a>
                                 </p>
                             </li>
                         </ul>
@@ -831,7 +871,7 @@
                                     Meatloaf Debugger
                                 </a>
                                 <p itemprop="caption description">
-                                    Meatloaf was my most technically challenging problem to solve.  Unlike Android, the first couple of iPhones had cameras with a <a href="https://en.wikipedia.org/wiki/Fixed-focus_lens" target="_blank">fixed focus lens</a>.  Because of this scanning a barcode was always blurry.  But running <a href="https://en.wikipedia.org/wiki/Blind_deconvolution" target="_blank">blind deconvolutions</a> were too computationally intensive for those early phones to do at multiple frames per second.  So instead I wrote Meatloaf which tries to solve the problem backwards.  Instead, it would take known barcode patterns, blur them, and compare them to the sample for similarity.
+                                    Meatloaf was my most technically challenging problem to solve.  Unlike Android, the first couple of iPhones had cameras with a <a href="https://en.wikipedia.org/wiki/Fixed-focus_lens" target="_blank">fixed focus lens</a>.  Because of this scanning a barcode was always blurry.  But running <a href="https://en.wikipedia.org/wiki/Blind_deconvolution" target="_blank">blind deconvolutions</a> to clear up the image was too computationally intensive to do at multiple frames per second. So instead I wrote Meatloaf which tries to solve the problem backwards. It worked by taking known barcode patterns, pre-blur them ahead of time, and compare them piecewise, segment by segment, to the target image for similarity.
                                 </p>
                             </li>
                             <li itemprop="associatedMedia" itemscope itemtype="http://schema.org/VideoObject">
@@ -839,7 +879,7 @@
                                     Meatloaf Demo
                                 </a>
                                 <p itemprop="caption description">
-                                    Meatloaf worked remarkably well considering the constraints.  Eventually, even after iPhones started shipping with auto-focus cameras, Meatloaf still proved quite useful.  We ran it in parallel with a standard decoder where the first one to successfully decode would win that round. As the lens slowly moved back and forth in its focusing cycle, only about 2 or 3 frames per second would come in fully focused, and those were often missed due to hand-shaking, glare or alignment issues.  Meatloaf often outperformed in real-world scenarios.
+                                    Meatloaf worked remarkably well considering the constraints.  Eventually, even after iPhones started shipping with auto-focus cameras, Meatloaf still proved quite useful.  We ran it in parallel with a standard decoder where the first one to successfully decode would win that round. As the lens slowly moved back and forth in its focusing cycle, only about 2 or 3 frames per second would come in fully focused, and those were often missed due to hand-shaking, glare or alignment issues.  Meatloaf often outperformed in real-world scenarios.  We eventually licensed the tech to Macys, Sam's Club, CNET, Consumer Reports and PriceGrabber.
                                 </p>
                             </li>
                         </ul>
