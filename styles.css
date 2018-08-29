@@ -14,11 +14,6 @@ body {
     background-color: #eee;
     margin: auto;
 }
-h4 {
-    font-size: 18px;
-    text-transform: uppercase;
-    /* font-weight: bold; */
-}
 p {
     color: #333;
     font-size: 18px;
@@ -116,6 +111,9 @@ section h2::after, section h2::before {
 }
 #startups h4 {
     margin: 0px 32px;
+    font-size: 18px;
+    text-transform: uppercase;
+    /* font-weight: bold; */
 }
 #startups div {
     margin: 0px 32px 16px 32px;
@@ -244,10 +242,12 @@ section h2::after, section h2::before {
 }
 #interests li > ul {
     width: 768px;
-    margin-top: 44px;
     display: flex;
     flex-flow: row wrap;
     justify-content: flex-end;
+}
+#interests li > ul > li {
+    margin-top: 44px;
 }
 #interests figure {
     display: inline-block;
@@ -282,11 +282,18 @@ section h2::after, section h2::before {
 #interests a:hover {
     transform: rotate(-4deg);
 }
-#interests figcaption {
+#interests h4 {
+    font-weight: normal;    
     text-align: center;
     font-size: 22px;
     padding: 16px;
     color: #333;
+    white-space: nowrap;
+}
+#interests figcaption {
+    font-size: 18px;
+    line-height: 18px;
+    color: #999;
 }
 #interests ul ul ul {
     display: none;
